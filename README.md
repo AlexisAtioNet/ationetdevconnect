@@ -35,23 +35,28 @@
 - [Wallet API Specifications](AN-Native_Wallet_Protocol-Spec.md)
 
 ## Consumer Card Module
-- [Consumer Card - Native Protocol](AN-Native_ConsumerCard.md)
+> These APIs are intended to support the Consumer Card module, with CC API, you can create custom portals, custom applications, among other things. The processing of transactions goes through the CC Native Protocol API.
+- [Consumer Card Native Protocol](AN-Native_ConsumerCard.md)
+- [Consumer Card API Specifications](AN-Consumer_Card_API-Spec.md)
 
 ## Loyalty Module
-- [Native Loyalty Protocol API description](AN-Native_Loyalty_Protocol-Spec.md)
+> This API aims to process Loyalty module transactions. Whether accumulations, redemptions, etc.
+- [Loyalty Native Protocol API description](AN-Native_Loyalty_Protocol-Spec.md)
 
 ## Terminal Management Module
-- [Device Updater API description](AN-Native_DeviceUpdater_Protocol-Spec.md)
-
-## Consumer Card Module
-- [Consumer Card API description](AN-Consumer_Card_API-Spec.md)
+> This API aims to expose the necessary messaging so that any device that wants to connect with Terminal Management can do so, both for monitoring, parameterization or updating.
+- [Terminal Management API description](AN-Native_DeviceUpdater_Protocol-Spec.md)
 
 ## Tracking Module
+> This API is responsible for interacting with the tracking module. You will be able to send geolocation information from any on board device installed in the vehicle. 
 - [Tracking Interface API Protocol Specification](AN-Native-Tracking_Protocol-Spec.md)
 
 ## Fiscal Module
+> This API aims to expose the necessary messaging for countries where there is specific legislation for electronic invoices. For each country there could be differences, request specific documentation.
+
 - [Fiscal API description](AN-Fiscal_API-Spec.md)
 
 ## .NET SDK
+> This documentation details how the SDK for .NET technology should be consumed. This SDK simplifies and reduces complexity for the programmer. It also describes how to install it from nuget.
 - [.NET SDK Reference](AN-SDK-Reference.md)
 
