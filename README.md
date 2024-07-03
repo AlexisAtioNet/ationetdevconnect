@@ -1,4 +1,4 @@
-![ationetlogo](Content/Images/LogoDEVCONNECT.png) 
+![ationetlogo](Content/Images/LogoDEVCONNECT500x529.png) 
 # ATIONET Dev Connect
 
 
