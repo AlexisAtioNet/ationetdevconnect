@@ -18,7 +18,7 @@
 ## Entities
 > This API is responsible for interacting with all ATIONET entities, either to create or modify them, whether they are sites, companies, contracts, projects, etc.
 > This API is typically used when you want to make a proprietary portal that replaces the ATIONET standard,
-> or to develop a proprietary mobile app that displays this information.
+> or to develop a proprietary mobile app that displays this information. This document is in Swagger format.
 - [Entities API Specifications](http://api.ationet.com/Help)
 
 ## Interfaces
