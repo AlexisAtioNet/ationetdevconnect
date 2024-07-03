@@ -1,5 +1,4 @@
 ![ationetlogo](Content/Images/LogoDEVCONNECT500x529.png) 
-# ATIONET Dev Connect
 
 ## Authorization API
 - [Native Transaction Protocol API](AN-Native_Protocol_Integration.md)
