@@ -19,12 +19,15 @@
 > This API is responsible for interacting with all ATIONET entities, either to create or modify them, whether they are sites, companies, contracts, projects, etc.
 > This API is typically used when you want to make a proprietary portal that replaces the ATIONET standard,
 > or to develop a proprietary mobile app that displays this information.
-- [Entities API description](http://api.ationet.com/Help)
+- [Entities API Specifications](http://api.ationet.com/Help)
 
 ## Interfaces
+> This API is responsible for implementing specific messages for integrations with ERP, these messages have more logic and processing than a typical standard CRUD message.
 - [Interface API Specifications](AN-Native_Interface_Protocol-Spec.md)
 
-## Inventory Module 
+## Inventory Module
+> This API is responsible for interacting with the inventory module. You will be able to send telemetry information from an ATG to ATIONET.
+> Information such as inventories, deliveries, alarms and product and water levels.
 - [FMS API Specifications](AN-Native_Inventory_Protocol-Spec.md)
 
 ## Wallet Module 
