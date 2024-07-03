@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Ationet/ationetdevconnect/raw/main/Content/Images/LogoDEVCONNECT500x529.png" />
+  <img src="https://github.com/Ationet/ationetdevconnect/raw/main/Content/Images/LogoDEVCONNECT300x317.png" />
 </p>
 
 ## Authorization API
