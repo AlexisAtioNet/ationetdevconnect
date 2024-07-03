@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="http://some_place.com/image.png" />
+  <img src="https://github.com/Ationet/ationetdevconnect/raw/main/Content/Images/LogoDEVCONNECT500x529.png" />
 </p>
-
-![ationetlogo](Content/Images/LogoDEVCONNECT500x529.png) 
 
 ## Authorization API
 - [Native Transaction Protocol API](AN-Native_Protocol_Integration.md)
