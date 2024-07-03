@@ -22,7 +22,7 @@
 - [Entities API Specifications](http://api.ationet.com/Help)
 
 ## Interfaces
-> This API is responsible for implementing specific messages for integrations with ERP, these messages have more logic and processing than a typical standard CRUD message.
+> This API is responsible for implementing specific messages for integrations with ERP, these messages have more logic and processing than a typical standard CRUD operation message.
 - [Interface API Specifications](AN-Native_Interface_Protocol-Spec.md)
 
 ## Inventory Module
@@ -30,7 +30,8 @@
 > Information such as inventories, deliveries, alarms and product and water levels.
 - [FMS API Specifications](AN-Native_Inventory_Protocol-Spec.md)
 
-## Wallet Module 
+## Wallet Module
+> This API focuses on exposing methods that allow implementing a wallet for the B2C segment. This API is the link between the gas station forecourt, the wallet and the processor
 - [Wallet API Specifications](AN-Native_Wallet_Protocol-Spec.md)
 
 ## Consumer Card Module
