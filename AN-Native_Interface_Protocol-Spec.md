@@ -43,6 +43,10 @@
 
 - [1 Scope](#1-scope)
 	- [1.1 Scope details](#11-scope-details)
+ 	- [1.2 Environments](#_toc160812883)
+		- [Test Environment](#_toc160812884)
+		- [Beta Environment](#_toc160812885)
+		- [Productive Environment](#_toc160812886)
 
 - [2 System Interface API](#2-system-interface-api)
 	- [2.1 Interface API Messages](#21-interface-api-messages)
@@ -200,7 +204,25 @@ Protocol: ATIONet Native Interface API
 
 Version: Version 1.4
 
-API URI: native.ationet.com/v1/interface
+<a name="_toc160193608"></a>
+# <a name="_toc160812883"></a>1.2 Environments 
+
+Ationet has multiple environments to ensure to be able to perform the relevant tests at the time of integration. For this reason, Ationet has:
+
+## <a name="_toc160193609"></a><a name="_toc160812884"></a>Test Environment
+This environment is used for development, allowing to test the advances that are generated.
+
+URL Environment: <https://native-test.ationet.com/>v1/interface
+
+## <a name="_toc160193610"></a><a name="_toc160812885"></a>Beta Environment
+It is a more stable environment, which already contains a finalized version. It is used to test the developments in search of errors, prior to their passage to production.
+
+URL Environment: <https://native-beta.ationet.com/>v1/interface
+
+## <a name="_toc160193611"></a><a name="_toc160812886"></a>Productive Environment
+The productive version of Ationet.
+
+URL Environment: <https://native.ationet.com/>v1/interface
 
 ## 2 System Interface API
 
