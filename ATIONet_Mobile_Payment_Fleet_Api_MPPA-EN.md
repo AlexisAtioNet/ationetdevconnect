@@ -19,7 +19,7 @@
 - [Overview](#overview)
 	- [Introduction](#introduction)
 	- [Entities](#Entities)
-	- [Sequence diagram Pay at Pump with Above Site Payment Authorization](#Sequence-diagram-Pay-at-Pump-with-Above-Site-Payment-Authorization)
+	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pay-at-Pump-with-Above-Site-Payment-Authorization)
 	- [Rules](#Rules)
 - [ATIONet Configuration](#ATIONet-Configuration)
 	- [Sites](#Sites)
@@ -61,10 +61,8 @@
 
 ### Introduction
 
-This Implementation Guide is intended to guide petroleum convenience retailers and their associated vendors when implementing mobile payment solutions consistent with
-ISO 12812. 
+This Implementation Guide is intended to guide petroleum convenience retailers and their associated vendors when implementing mobile payment solutions consistent with Conexxus Implementation Guide
 </br>
->Note: ISO 12812 is document that will provide requirements, guidance and use cases for all stakeholders in the mobile payments arena.
 
 
 ### Entities
@@ -90,7 +88,7 @@ such as consumer prompting, local velocity checking and receipt formatting and p
 >Note: MOBILE PAYMENT API is the common interface through which the MPA sends and receives requests from the MPPA. The description, you can read about  the methods and how to consume in [API Section](#ATIONet-PFEP-Fleet-Mobile-Payment-Api).
 
 
-### Sequence diagram Pay at Pump with Above Site Payment Authorization 
+### Sequence diagram Pay at Pump 
 
 
 ![ationetTR](Content/Images/SiteSystemCommander/SiteSystem_secuencia3.svg)
@@ -122,10 +120,6 @@ need to regenerate the receipt information.</li>
 	<li>MPPA sends a receipt response back to the Site System.</li>
 </ol>
 
-
-## Rules
-
-In ATIONet rules refer to limits that can be configured by the company and associated to different entities. Inside this view you can consult, create or edit rules. When the entiti have a request rule, if the Customer send a Pre authorization, ATIONET will respond by requesting additional information in order to approve it. <a href='https://github.com/Ationet/ationetdocs/blob/master/UserManuals/ATIONet_Network_User_Manual-EN-Modules/Fleets.md#rules'> Here </a> you can read more about Rules.
 
 ### Flow 
 
