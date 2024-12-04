@@ -29,6 +29,7 @@
 	- [Response Codes](#response-codes)
  - [Mobile Paymnet Processor](#Mobile-Paymnet-Processor)
 	- [Authorize](#Authorize)
+	- [Notifications](#Notifications)
 </br>
 
 
