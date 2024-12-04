@@ -20,38 +20,13 @@
 	- [Introduction](#introduction)
 	- [Entities](#Entities)
 	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pay-at-Pump-with-Above-Site-Payment-Authorization)
-	- [Rules](#Rules)
-- [ATIONet Configuration](#ATIONet-Configuration)
-	- [Sites](#Sites)
-	- [Terminals/Controllers](#Terminals-or-Controllers)
-	- [Static QR Image](#Static-QR-Image)
-- [Site System Implementation guide](#Site-System-Implementation-guide)
-	- [Commander implementation guide](#Commander-implementation-guide)
-		- [STEP 1 Site Mobile Configuration](#STEP-1-Site-Mobile-Configuration)
-		- [STEP 2 Host Mobile Configuation](#STEP2-Host-Mobile-Configuation)
-			- [Values descriptions](#Values-descriptions)
-			- [Status Codes and Messages](#Status-Codes-and-Messages)
 - [ATIONet PFEP Fleet Mobile Payment Api](#ATIONet-PFEP-Fleet-Mobile-Payment-Api)
 	- [Description](#description)
 	- [Details](#api-details)	
-	- [Supported Transactions](#supported-transactions)
-	- [Message Structure](#message-structure)
-		- [MobilePayments](#mobilePayments)
-		- [PromptPreauthorizations](#PromptPreauthorizations)
-		- [GetTransaction](#getTransaction)
-		- [Cancel](#cancel)
-	- [Field Descriptions](#field-descriptions)
+	- [Supported Methods](#supported-Methods)
 	- [Error Handling](#error-handling)
 	- [Transactions States](#transactions-states)
-		- [Transaction states sequence diagram on Pre authorization Request](#transactionstates-sequence-diagram-on-pre-authorization-request)
-		- [Transaction states sequence diagram on Cancelation Request](#transaction-states-sequence-diagram-on-cancelation-request)
 	- [Response Codes](#response-codes)
-	- [Message Samples](#message-samples)
-		- [MobilePayments sample](#mobilePayments-sample)
-		- [PreAuthorizedPayments sample](#preAuthorizedpayments-sample)
-		- [GetTransaction sample](#gettransaction-sample)
-		- [Cancel sample](#cancel-sample)
-- [EXTERNAL PFEP Fleet Mobile Payment Api](EXTERNAL_Mobile_Payment_Fleet_Api_-EN.md)
 </br>
 
 
@@ -247,12 +222,17 @@ Allows you to send a message to determine if the Host is available or not. In tu
 
 *URL: /v{{Version}}/SiteSystem/connection* </br>
 *Method: POST* </br>
-*Body: {
+*Body:*
+```
+{
   "APPLICATIONSENDER": "{{SiteId}}",
   "WORKSTATIONID": "{{SiteId}}",
   "TIMESTAMP": "2009-11-20T17:30:50",
   "INTERFACEVERSION": "1.0"
-}* </br>
+}
+```
+
+ </br>
 
 #### Response Format
 
@@ -297,7 +277,9 @@ Allows you to configure the site to an existing session
 
 *URL: v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/siteData* </br>
 *Method: GET* </br>
-*Body: {
+*Body:*
+```
+{
      "name" : "IFSF/Conexxus Station",   
      "siteIDs" : [
              { "type":"SHIPTO", "id": "{{SiteId}}" } 
@@ -306,7 +288,9 @@ Allows you to configure the site to an existing session
        "Delta 1A, Building L’Aimant",   
        "Business Park Ijsseloord 2"
      ]
-   }* </br>
+   }
+```
+</br>
 
 #### Response Format
 
@@ -327,7 +311,9 @@ Allows you to configure the list of products with which an existing session will
 
 *URL: /v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/products* </br>
 *Method: POST* </br>
-*Body:{
+*Body:*
+```
+{
    "fuelProducts":[
       {
          "productNo":"1",
@@ -382,7 +368,8 @@ Allows you to configure the list of products with which an existing session will
          ]
       }
    ]
-}*
+}
+```
 </br>
 
 #### Response Format
@@ -405,7 +392,9 @@ Allows you to configure the list of nozzles available for the session.
 
 *URL: /v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/dsps* </br>
 *Method: POST* </br>
-*Body:{
+*Body:*
+```
+{
   "dispensersConfiguration": [
     {
       "dispenserID": "1",
@@ -468,7 +457,8 @@ Allows you to configure the list of nozzles available for the session.
       ]
     }
   ]
-}*
+}
+```
 </br>
 
 #### Response Format
@@ -532,7 +522,7 @@ This section describe through a table  all  states that a sale can have.
 			<th rowspan="2" width="125" align="center">
 				ID
 			</th>			
-			<th rowspan="2" width="125" align="left">
+			<th rowspan="2" width="300" align="left">
 				Message
 			</th>
 		</tr>		
@@ -546,7 +536,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">1</p>
 			</td>
 			<td>
-				<p align="left">Created</p>
+				<p align="left"  width="125">Created</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -557,7 +547,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">2</p>
 			</td>
 			<td>
-				<p align="left">Preauthorization Accepted</p>
+				<p align="left"  width="125">Preauthorization Accepted</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -568,7 +558,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">3</p>
 			</td>
 			<td>
-				<p align="left">Preauthorization Rejected</p>
+				<p align="left"  width="125">Preauthorization Rejected</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -579,7 +569,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">4</p>
 			</td>
 			<td>
-				<p align="left">FuelPoint Authorization Requested</p>
+				<p align="left"  width="125">FuelPoint Authorization Requested</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -590,7 +580,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">5</p>
 			</td>
 			<td>
-				<p align="left">Site System Accept Pump Reserve</p>
+				<p align="left"  width="125">Site System Accept Pump Reserve</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -601,7 +591,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">6</p>
 			</td>
 			<td>
-				<p align="left">Site System not Accept Pump Reserve</p>
+				<p align="left"  width="125">Site System not Accept Pump Reserve</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -612,7 +602,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">7</p>
 			</td>
 			<td>
-				<p align="left">Fuel Point Authorized</p>
+				<p align="left"  width="125">Fuel Point Authorized</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -623,7 +613,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">8</p>
 			</td>
 			<td>
-				<p align="left">Canceled By Fuel Point</p>
+				<p align="left"  width="125">Canceled By Fuel Point</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -634,7 +624,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">9</p>
 			</td>
 			<td>
-				<p align="left">Fueling</p>
+				<p align="left"  width="125">Fueling</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -645,7 +635,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">10</p>
 			</td>
 			<td>
-				<p align="left">Complete</p>
+				<p align="left"  width="125">Complete</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -656,7 +646,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">11</p>
 			</td>
 			<td>
-				<p align="left">Complete Failed</p>
+				<p align="left"  width="125">Complete Failed</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -667,7 +657,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">14</p>
 			</td>
 			<td>
-				<p align="left">Canceled By Site System</p>
+				<p align="left"  width="125">Canceled By Site System</p>
 			</td>
 		 </tr>
 		<tr valign="top">
@@ -678,7 +668,7 @@ This section describe through a table  all  states that a sale can have.
 				<p align="center">19</p>
 			</td>
 			<td>
-				<p align="left">Cancelled By MPPA</p>
+				<p align="left"  width="125">Cancelled By MPPA</p>
 			</td>
 		 </tr>
 </table>
