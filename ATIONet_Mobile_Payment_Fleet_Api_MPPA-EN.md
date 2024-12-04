@@ -19,7 +19,7 @@
 - [Overview](#overview)
 	- [Introduction](#introduction)
 	- [Entities](#Entities)
-	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pay-at-Pump-with-Above-Site-Payment-Authorization)
+	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pre-Pay-at-Pump)
 - [Site System Implementation](#Site-System-Implementation)
 	- [Description](#description)
 	- [Details](#api-details)	
