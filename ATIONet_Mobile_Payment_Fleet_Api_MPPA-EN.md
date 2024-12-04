@@ -27,8 +27,8 @@
 	- [Error Handling](#error-handling)
 	- [Transactions States](#transactions-states)
 	- [Response Codes](#response-codes)
- - [Mobile Paymnet Processor]
-	- [Description](#description)
+ - [Mobile Paymnet Processor](#Mobile-Paymnet-Processor)
+	- [Authorize](#Authorize)
 </br>
 
 
@@ -507,17 +507,19 @@ Allows you to configure the list of nozzles available for the session.
 # Mobile Paymnet Processor
 
 
-### SSE 
+### Authorize 
 
-Allows you to configure the list of nozzles available for the session.
+Allows to initiate a mobile authorization so that the SiteSystem can receive an intention to pay for a dispatch.
 
 #### Request Format
 
-*URL: /v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/dsps* </br>
-*Method: GET* </br>
+*URL: /v{{Version}}/MPA/prepaid/{{PosId}}/Authorize* </br>
+*Method: Post* </br>
 *HEader:*
 	Content-Type: text/event-stream;  
-*Body:*
+*Body:* none
+
+
 </br>
 
 #### Response Format
@@ -526,9 +528,41 @@ Allows you to configure the list of nozzles available for the session.
 
 	Content-Type: text/event-stream;  
 
-*Body:	Message on the SSE channel*
+*Body:*
+
+```
+{
+transactionId = GUID
+}
+
+```
 
 
+
+
+### Notifications 
+
+Allows external payment processor to send a payment object search notification
+
+#### Request Format
+
+*URL: /v{{Version}}/MPA/prepaid/Notifications/{{TransactionId}}?topic={{value}}&id={{value}}* </br>
+*Method: Post* </br>
+*HEader:*
+	Content-Type: text/event-stream;  
+*Body:* none
+
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/event-stream;  
+
+*Body: none*
+*HTTP Code 200*
 
 
 
