@@ -30,6 +30,7 @@
  - [Mobile Paymnet Processor](#Mobile-Paymnet-Processor)
 	- [Authorize](#Authorize)
 	- [Notifications](#Notifications)
+  	- [GetTransaction](#GetTransaction)
 </br>
 
 
@@ -516,8 +517,6 @@ Allows to initiate a mobile authorization so that the SiteSystem can receive an 
 
 *URL: /v{{Version}}/MPA/prepaid/{{PosId}}/Authorize* </br>
 *Method: Post* </br>
-*HEader:*
-	Content-Type: text/event-stream;  
 *Body:* none
 
 
@@ -549,8 +548,6 @@ Allows external payment processor to send a payment object search notification
 
 *URL: /v{{Version}}/MPA/prepaid/Notifications/{{TransactionId}}?topic={{value}}&id={{value}}* </br>
 *Method: Post* </br>
-*HEader:*
-	Content-Type: text/event-stream;  
 *Body:* none
 
 
@@ -566,6 +563,58 @@ Allows external payment processor to send a payment object search notification
 *HTTP Code 200*
 
 
+### GetTransaction 
+
+Allows external payment processor to send a payment object search notification
+
+#### Request Format
+
+*URL: /v{{Version}}/MPA/prepaid/Transaction/{{transactionId}}* </br>
+*Method: Post* </br>
+*Body:* none
+
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+    "id": "1a5b9c3b-7036-4eee-ac07-393adc732b9a",
+    "siteCode": "99991",
+    "primaryTrack": null,
+    "odometer": 0,
+    "terminalIdentification": null,
+    "transactionSequenceNumber": 25569,
+    "state_Name": "Site System not Accept Pump Reserve",
+    "state_Id": 6,
+    "paymentProcessorReferenceId": null,
+    "paymentProcessorMessage": null,
+    "siteSystemMessage": "Cancel by CancelReserveNotification",
+    "fuelPointNumber": 1,
+    "paymentMethod": "ExternalPrepaid",
+    "requestedAmount": 0.00,
+    "authorizedAmount": 0.00,
+    "dispatchedAmount": 0.00,
+    "dispatchedQuantity": 0.00,
+    "productCode": "",
+    "productDescription": null,
+    "productUnitPrice": 0.00,
+    "unitMeasure": "LTR",
+    "createDateTime": "2024-11-13T20:20:36.5334149",
+    "updateDateTime": "2024-11-13T20:21:51.3733333",
+    "idDispatch": "00000000-0000-0000-0000-000000000000"
+}
+
+```
+
+*HTTP Code 200*
 
 
 ## Error Handling
