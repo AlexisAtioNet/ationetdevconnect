@@ -20,13 +20,15 @@
 	- [Introduction](#introduction)
 	- [Entities](#Entities)
 	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pay-at-Pump-with-Above-Site-Payment-Authorization)
-- [ATIONet PFEP Fleet Mobile Payment Api](#ATIONet-PFEP-Fleet-Mobile-Payment-Api)
+- [Site System Implementation](#Site-System-Implementation)
 	- [Description](#description)
 	- [Details](#api-details)	
 	- [Supported Methods](#supported-Methods)
 	- [Error Handling](#error-handling)
 	- [Transactions States](#transactions-states)
 	- [Response Codes](#response-codes)
+ - [Mobile Paymnet Processor]
+	- [Description](#description)
 </br>
 
 
@@ -93,7 +95,7 @@ Below is an image as an example
 
 ![ationetTR](Content/Images/SiteSystemCommander/siteqr2.jpeg)
 
-# ATIONet PFEP Fleet Mobile Payment Api
+# Site System Implementation
 
 ### Introduction
 
@@ -108,7 +110,7 @@ ATIONet’s fleet Mobile Payment API It is responsible for intermediating the mo
 
 API URI: *https://mobilepayapi.ationet.com/*
 
-### Supported Methods
+### Site System Supported Methods
 
 <table>
 	<thead>
@@ -494,6 +496,38 @@ Allows you to configure the list of nozzles available for the session.
 	Content-Type: text/event-stream;  
 
 *Body:	Message on the SSE channel*
+
+
+
+
+
+
+
+
+# Mobile Paymnet Processor
+
+
+### SSE 
+
+Allows you to configure the list of nozzles available for the session.
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/dsps* </br>
+*Method: GET* </br>
+*HEader:*
+	Content-Type: text/event-stream;  
+*Body:*
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/event-stream;  
+
+*Body:	Message on the SSE channel*
+
 
 
 
