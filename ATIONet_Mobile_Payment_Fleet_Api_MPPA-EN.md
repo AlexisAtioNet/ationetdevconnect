@@ -227,7 +227,7 @@ Allows you to send a message to determine if the Host is available or not. In tu
 *URL: /v{{Version}}/SiteSystem/connection* </br>
 *Method: POST* </br>
 *Body:*
-```
+```json
 {
   "APPLICATIONSENDER": "{{SiteId}}",
   "WORKSTATIONID": "{{SiteId}}",
@@ -282,7 +282,7 @@ Allows you to configure the site to an existing session
 *URL: v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/siteData* </br>
 *Method: GET* </br>
 *Body:*
-```
+```json
 {
      "name" : "IFSF/Conexxus Station",   
      "siteIDs" : [
@@ -316,7 +316,7 @@ Allows you to configure the list of products with which an existing session will
 *URL: /v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/products* </br>
 *Method: POST* </br>
 *Body:*
-```
+```json
 {
    "fuelProducts":[
       {
@@ -397,7 +397,7 @@ Allows you to configure the list of nozzles available for the session.
 *URL: /v{{Version}}/SiteSystem/SSE/{{SiteSessionId}}/dsps* </br>
 *Method: POST* </br>
 *Body:*
-```
+```json
 {
   "dispensersConfiguration": [
     {
@@ -530,7 +530,7 @@ Allows to initiate a mobile authorization so that the SiteSystem can receive an 
 
 *Body:*
 
-```
+```json
 {
 transactionId = GUID
 }
