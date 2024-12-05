@@ -24,15 +24,18 @@
 	- [Description](#description)
 	- [Details](#api-details)	
 	- [Site System Configuration Methods](#site-system-configuration-Methods)
-	- [Error Handling](#error-handling)
-	- [Transactions States](#transactions-states)
-	- [Response Codes](#response-codes)
- - [Mobile Paymnet Processor](#Mobile-Paymnet-Processor)
+ - [PrePaid Flow]
+ - [PostPaid Flow]
+ - [Mobile Paymnet Processor](#mobile-paymnet-processor)
 	- [Authorize](#Authorize)
 	- [Notifications](#Notifications)
   	- [GetTransaction](#GetTransaction)
-</br>
+  - [General Information](#general-information)
+	- [Error Handling](#error-handling)
+	- [Transactions States](#transactions-states)
+	- [Response Codes](#response-codes)  	
 
+</br>
 
 ## Overview
 
@@ -616,6 +619,8 @@ Allows external payment processor to send a payment object search notification
 
 *HTTP Code 200*
 
+
+#General Information
 
 ## Error Handling
 
