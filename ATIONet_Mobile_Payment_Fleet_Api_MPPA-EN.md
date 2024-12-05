@@ -20,7 +20,7 @@
 	- [Introduction](#introduction)
 	- [Entities](#Entities)
 	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pre-Pay-at-Pump)
-- [Site System Configuration](#Site-System-Configuration)]
+- [Site System Configuration](#Site-System-Configuration)
 	- [Introduction](#introduction)
 	- [Description](#description)
  	- [API Details](#api-details)  
