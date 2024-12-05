@@ -25,30 +25,30 @@
 	- [Description](#description)
  	- [API Details](#api-details)  
 	- [Site System Configuration Methods](#site-system-configuration-Methods)
- - [PrePaid Flow]
-   	- [Flow Description]
+- [PrePaid Flow]
+	- [Flow Description]
 	- [PrePaid Site System Implementation](#prepaid-site-system-implementation)
 		- [Reserve Notification (POST)]
-   		- [Reserve Notification (DELETE)]
-    		- [TransactionInfo]
-     		- [Authorization Notification]
-      		- [BeginFuelingNotification]
-       		- [FinalizeTransactionNotification]  
+		- [Reserve Notification (DELETE)]
+		- [TransactionInfo]
+		- [Authorization Notification]
+		- [BeginFuelingNotification]
+		- [FinalizeTransactionNotification]  
 	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
 		- [Authorize](#Authorize)
 		- [Notifications](#Notifications)
-	  	- [GetTransaction](#GetTransaction)
- - [PostPaid Flow]
-   	- [Flow Description]
-  	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
-     		-[TransactionData]
-      		-[CloseTransactionNotification]    
-        - [Mobile Paymnet Processor](#mobile-paymnet-processor)
-          	- [PaymentRequest]
-          	- [Notifications](#Notifications)
-	  	- [GetTransaction](#GetTransaction)
+		- [GetTransaction](#GetTransaction)
+- [PostPaid Flow]
+	- [Flow Description]
+	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
+		-[TransactionData]
+		-[CloseTransactionNotification]    
+	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
+		- [PaymentRequest]
+		- [Notifications](#Notifications)
+		- [GetTransaction](#GetTransaction)
 
-  - [General Information](#general-information)
+- [General Information](#general-information)
 	- [Error Handling](#error-handling)
 	- [Transactions States](#transactions-states)
 	- [Response Codes](#response-codes)  	
