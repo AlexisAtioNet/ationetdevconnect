@@ -523,11 +523,18 @@ Allows you to configure the list of nozzles available for the session.
 
 
 
+#PrePaid Flow
+## Flow Description
+## PrePaid Site System Implementation
+###Reserve Notification (POST)
+###Reserve Notification (DELETE)
+###TransactionInfo
+###Authorization Notification
+###BeginFuelingNotification
+###FinalizeTransactionNotification
 
 
-
-
-# Mobile Paymnet Processor
+## Mobile Paymnet Processor
 
 
 ### Authorize 
