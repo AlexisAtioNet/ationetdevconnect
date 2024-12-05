@@ -20,16 +20,20 @@
 	- [Introduction](#introduction)
 	- [Entities](#Entities)
 	- [Sequence diagram Pay at Pump](#Sequence-diagram-Pre-Pay-at-Pump)
-- [Site System Implementation](#Site-System-Implementation)
+- [Site System Configuration](#Site-System-Configuration)]
+	- [Introduction](#introduction)
 	- [Description](#description)
-	- [Details](#api-details)	
+ 	- [API Details](#api-details)  
 	- [Site System Configuration Methods](#site-system-configuration-Methods)
  - [PrePaid Flow]
+	- [PrePaid Site System Implementation](#prepaid-site-system-implementation)
+        - [Mobile Paymnet Processor](#mobile-paymnet-processor)
+		- [Authorize](#Authorize)
+		- [Notifications](#Notifications)
+	  	- [GetTransaction](#GetTransaction)
  - [PostPaid Flow]
- - [Mobile Paymnet Processor](#mobile-paymnet-processor)
-	- [Authorize](#Authorize)
-	- [Notifications](#Notifications)
-  	- [GetTransaction](#GetTransaction)
+  	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
+
   - [General Information](#general-information)
 	- [Error Handling](#error-handling)
 	- [Transactions States](#transactions-states)
@@ -100,14 +104,14 @@ Below is an image as an example
 
 ![ationetTR](Content/Images/SiteSystemCommander/siteqr2.jpeg)
 
-# Site System Implementation
+# Site System Configuration
 
 ### Introduction
 
 This specification is intended to document ATIONet’s fleet Mobile Payment API messaging format and related features required for usarage. The following sections provide descriptions of the messages themselves, the expected behaviour for each supported transaction type and a common ground for the functionality of each relevant item.
 
  
-## Description 
+### Description 
 
 ATIONet’s fleet Mobile Payment API It is responsible for intermediating the mobile payment transaction between the SiteSystem and the payment processor.
 
