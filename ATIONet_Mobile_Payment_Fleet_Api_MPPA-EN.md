@@ -41,9 +41,8 @@
 - [PostPaid Flow]
 	- [Flow Description]
 	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
-
-   -[TransactionData]
-		-[CloseTransactionNotification]    
+		- [TransactionData]
+		- [CloseTransactionNotification]    
 	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
 		- [PaymentRequest]
 		- [Notifications](#Notifications)
