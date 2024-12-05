@@ -34,10 +34,10 @@
      		- [Authorization Notification]
       		- [BeginFuelingNotification]
        		- [FinalizeTransactionNotification]  
-- [Mobile Paymnet Processor](#mobile-paymnet-processor)
-	- [Authorize](#Authorize)
-	- [Notifications](#Notifications)
-  	- [GetTransaction](#GetTransaction)
+	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
+		- [Authorize](#Authorize)
+		- [Notifications](#Notifications)
+	  	- [GetTransaction](#GetTransaction)
  - [PostPaid Flow]
    	- [Flow Description]
   	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
