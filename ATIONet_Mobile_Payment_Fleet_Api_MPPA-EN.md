@@ -23,7 +23,7 @@
 - [Site System Implementation](#Site-System-Implementation)
 	- [Description](#description)
 	- [Details](#api-details)	
-	- [Supported Methods](#supported-Methods)
+	- [Site System Configuration Methods](#site-system-configuration-Methods)
 	- [Error Handling](#error-handling)
 	- [Transactions States](#transactions-states)
 	- [Response Codes](#response-codes)
@@ -112,7 +112,7 @@ ATIONet’s fleet Mobile Payment API It is responsible for intermediating the mo
 
 API URI: *https://mobilepayapi.ationet.com/*
 
-### Site System Supported Methods
+### Site System Configuration Methods
 
 <table>
 	<thead>
