@@ -28,16 +28,16 @@
 - [PrePaid Flow]
 	- [Flow Description]
 	- [PrePaid Site System Implementation](#prepaid-site-system-implementation)
-		- [Reserve Notification (POST)]
-		- [Reserve Notification (DELETE)]
-		- [TransactionInfo]
-		- [Authorization Notification]
-		- [BeginFuelingNotification]
-		- [FinalizeTransactionNotification]  
+		- [Reserve Notification (POST)](#reserve-notification-(POST))
+		- [Reserve Notification (DELETE)](#reserve-notification-(DELETE))
+		- [TransactionInfo](#TransactionInfo)
+		- [Authorization Notification](#authorization-notification)
+		- [BeginFuelingNotification](#BeginFuelingNotification)
+		- [FinalizeTransactionNotification](#FinalizeTransactionNotification)
 	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
 		- [Authorize](#Authorize)
 		- [Notifications](#Notifications)
-		- [GetTransaction](#GetTransaction)
+		- [GetTransaction](#GetTransaction)n
 - [PostPaid Flow]
 	- [Flow Description]
 	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
