@@ -853,7 +853,7 @@ Allows to initiate a mobile authorization so that the SiteSystem can receive an 
 
 ```json
 {
-transactionId = GUID
+	"transactionId" = GUID
 }
 
 ```
