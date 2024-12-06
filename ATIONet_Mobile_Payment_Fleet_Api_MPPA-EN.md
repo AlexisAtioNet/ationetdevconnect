@@ -41,11 +41,12 @@
 		- [GetTransaction](#GetTransaction)
 - [PostPaid Flow]
 	- [Flow Sequence](#flow-sequence)
+ 	- [Timeout State](#timeout-state)
 	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
-		- [TransactionData]
-		- [CloseTransactionNotification]    
+		- [TransactionData](#TransactionData)
+		- [CloseTransactionNotification](#CloseTransactionNotification)    
 	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
-		- [PaymentRequest]
+		- [PaymentRequest](#PaymentRequest)
 		- [Notifications](#Notifications)
 		- [GetTransaction](#GetTransaction)
 
@@ -902,7 +903,7 @@ Allows external payment processor to send a payment object search notification
 #### Request Format
 
 *URL: /v{{Version}}/MPA/prepaid/Transaction/{{transactionId}}* </br>
-*Method: Post* </br>
+*Method: Get* </br>
 *Body:* none
 
 
@@ -947,6 +948,362 @@ Allows external payment processor to send a payment object search notification
 ```
 
 *HTTP Code 200*
+
+
+
+
+
+# PostPaid Flow
+
+## Flow Sequence 
+
+![image](https://github.com/user-attachments/assets/40f37b4a-d625-417e-82e8-2b7c343eeddb)
+
+
+## Timeout States
+
+![image](https://github.com/user-attachments/assets/fb6674e6-5a61-4fa7-aa30-7461d60700b2)
+
+
+## PostPaid Site System Implementation
+
+### TransactionData
+
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/trxData* </br>
+*Method: Post* </br>
+*Body:* 
+```json
+{
+  "umti": "{{TransactionId}}",
+  "trxInfo": {
+    "timestamp": "2023-07-06T13:47:17.526Z",
+    "result": "success",
+    "error": "string",
+    "message": "string",
+    "UMTI": "{{TransactionId}}",
+    "transactionStatus": "string",
+    "fuelingPointID": "string",
+    "merchantID": "string",
+    "siteID": {
+      "type": "string",
+      "id": "string"
+    }
+  },
+  "paymentInfo": {
+    "paymentMethod": "string",
+    "finalAmount": {
+      "value": "string",
+      "currency": "string"
+    },
+    "hostAuthNumber": "string",
+    "cardType": "string",
+    "cardCircuit": "string"
+  },
+  "fuelingInfo": {
+    "fuelProducts": [
+      {
+        "productNo": "1",
+        "productName": "Combustible 1",
+        "productCode": "CODE01",
+        "prices": [
+          {
+            "fuelUnitPrice": {
+              "value": "string",
+              "currency": "string"
+            },
+            "priceTier": "string",
+            "modeNo": "string"
+          }
+        ],
+        "fuelPrice": {
+          "value": "10",
+          "currency": "USD"
+        },
+        "fuelUnitOfMeasurement": "LTR",
+        "gradeAllowed": "string",
+        "merchandiseCode": "string",
+        "taxId": "string"
+      }
+    ],
+    "fuelingPointID": "string",
+    "fuelAmount": {
+      "value": "1",
+      "currency": "USD"
+    },
+    "quantity": {
+      "value": "10",
+      "uom": "LTR"
+    },
+    "serviceLevel": "string",
+    "modeNo": "string",
+    "priceTier": "string"
+  },
+  "receiptInfo": [
+    "string"
+  ]
+}
+```
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+    "id": "1a5b9c3b-7036-4eee-ac07-393adc732b9a",
+    "siteCode": "99991",
+    "primaryTrack": null,
+    "odometer": 0,
+    "terminalIdentification": null,
+    "transactionSequenceNumber": 25569,
+    "state_Name": "Site System not Accept Pump Reserve",
+    "state_Id": 6,
+    "paymentProcessorReferenceId": null,
+    "paymentProcessorMessage": null,
+    "siteSystemMessage": "Cancel by CancelReserveNotification",
+    "fuelPointNumber": 1,
+    "paymentMethod": "ExternalPrepaid",
+    "requestedAmount": 0.00,
+    "authorizedAmount": 0.00,
+    "dispatchedAmount": 0.00,
+    "dispatchedQuantity": 0.00,
+    "productCode": "",
+    "productDescription": null,
+    "productUnitPrice": 0.00,
+    "unitMeasure": "LTR",
+    "createDateTime": "2024-11-13T20:20:36.5334149",
+    "updateDateTime": "2024-11-13T20:21:51.3733333",
+    "idDispatch": "00000000-0000-0000-0000-000000000000"
+}
+
+```
+
+*HTTP Code 200*
+
+
+
+### CloseTransactionNotification
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/closeTrxNotification* </br>
+*Method: Post* </br>
+*Body:* 
+```json
+{
+  "umti": "{{TransactionId}}",
+  "trxInfo": {
+    "timestamp": "2023-07-06T14:06:25.148Z",
+    "result": "success",
+    "error": "string",
+    "message": "string",
+    "UMTI": "{{TransactionId}}",
+    "transactionStatus": "success",
+    "fuelingPointID": "string",
+    "merchantID": "string",
+    "siteID": {
+      "type": "string",
+      "id": "string"
+    }
+  },
+  "paymentInfo": {
+    "paymentMethod": "string",
+    "finalAmount": {
+      "value": "string",
+      "currency": "string"
+    },
+    "hostAuthNumber": "string",
+    "cardType": "string",
+    "cardCircuit": "string"
+  },
+  "fuelingInfo": {
+    "fuelProducts": [
+      {
+        "productNo": "string",
+        "productId": {
+          "productName": "string",
+          "description": "string"
+        },
+        "productCode": "string",
+        "prices": [
+          {
+            "fuelUnitPrice": {
+              "value": "string",
+              "currency": "string"
+            },
+            "priceTier": "string",
+            "modeNo": "string"
+          }
+        ],
+        "fuelPrice": {
+          "value": "string",
+          "currency": "string"
+        },
+        "fuelUnitOfMeasurement": "string",
+        "gradeAllowed": "string",
+        "merchandiseCode": "string",
+        "taxId": "string"
+      }
+    ],
+    "fuelingPointID": "string",
+    "fuelAmount": {
+      "value": "string",
+      "currency": "string"
+    },
+    "quantity": {
+      "value": "string",
+      "uom": "string"
+    },
+    "serviceLevel": "string",
+    "modeNo": "string",
+    "priceTier": "string"
+  },
+  "receiptInfo": [
+    "string"
+  ]
+}
+
+```
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string
+}
+```
+
+*HTTP Code 200*
+
+
+
+## Mobile Paymnet Processor
+
+### PaymentRequest
+#### Request Format
+
+*URL: v{{Version}}/MPA/postpaid/{{PosId}}/PaymentRequest* </br>
+*Method: Post* </br>
+*Body:* None
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"TransactionId": GUID
+}
+
+```
+
+*HTTP Code 200*
+
+
+
+
+### Notifications 
+
+Allows external payment processor to send a payment object search notification
+
+#### Request Format
+
+*URL: /v{{Version}}/MPA/postpaid/Notifications/{{TransactionId}}?topic={{value}}&id={{value}}* </br>
+*Method: Post* </br>
+*Body:* none
+
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/event-stream;  
+
+*Body: none*
+*HTTP Code 200*
+
+
+### GetTransaction 
+
+Allows external payment processor to send a payment object search notification
+
+#### Request Format
+
+*URL: /v{{Version}}/MPA/postpaid/Transaction/{{transactionId}}* </br>
+*Method: Get* </br>
+*Body:* none
+
+
+</br>
+
+#### Response Format
+
+*Header:*
+
+	Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+    "id": "1a5b9c3b-7036-4eee-ac07-393adc732b9a",
+    "siteCode": "99991",
+    "primaryTrack": null,
+    "odometer": 0,
+    "terminalIdentification": null,
+    "transactionSequenceNumber": 25569,
+    "state_Name": "Site System not Accept Pump Reserve",
+    "state_Id": 6,
+    "paymentProcessorReferenceId": null,
+    "paymentProcessorMessage": null,
+    "siteSystemMessage": "Cancel by CancelReserveNotification",
+    "fuelPointNumber": 1,
+    "paymentMethod": "ExternalPrepaid",
+    "requestedAmount": 0.00,
+    "authorizedAmount": 0.00,
+    "dispatchedAmount": 0.00,
+    "dispatchedQuantity": 0.00,
+    "productCode": "",
+    "productDescription": null,
+    "productUnitPrice": 0.00,
+    "unitMeasure": "LTR",
+    "createDateTime": "2024-11-13T20:20:36.5334149",
+    "updateDateTime": "2024-11-13T20:21:51.3733333",
+    "idDispatch": "00000000-0000-0000-0000-000000000000"
+}
+
+```
+
+*HTTP Code 200*
+
 
 
 # General Information
