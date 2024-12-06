@@ -90,29 +90,6 @@ such as consumer prompting, local velocity checking and receipt formatting and p
 >Note: MOBILE PAYMENT API is the common interface through which the MPA sends and receives requests from the MPPA. The description, you can read about  the methods and how to consume in [API Section](#ATIONet-PFEP-Fleet-Mobile-Payment-Api).
 
 
-### Sequence diagram Pre Pay at Pump 
-
-
-![Diagrama de Estados - MPPA-PrePago](https://github.com/user-attachments/assets/2f8efeae-6c4e-44f5-98a2-203da54463a6)
-
-
-<ol>
-	<li>Mobile Payment Application (MPA) is activated by consumer.</li>
-	<li>Scan the QR code to start the operation</li>
-	<li>MPA sends information to MPPA as an Authorization Request.</li>
-	<li>MPPA sends a Mobile Pump Reserve Request to the Site System to reserve the fueling point.</li>
-	<li>Site System responds to the Mobile Pump Reserve Request.</li>
-	<li>The MPPA sends a Mobile Auth Request to the Site System. If generated, the validation code in the payload.</li>
-	<li>The PFEP (through the site system) sends the payment to the MPPA.</li>
-	<li>The MPPA sends a Mobile Auth Request to Site Systen.</li>
-	<li>The Site Systen response to MPPA with a Mobile Auth Response.</li>
-	<li>MPA validates transaction status</li>
-	<li>MPPA sent to Site System a authorization message.</li>
-	<li>Site System send to MPPA a Begin Fueling Message.</li>
-	<li>Site System send to MPPA a Finalize Trx Message.</li>
-</ol>
-
-
 ### Static QR Image
 
 Static QR Image is a photo that is pasted in the Pump and contains the pump Number and the Site code, it's mandatory data to do a Transacction.
