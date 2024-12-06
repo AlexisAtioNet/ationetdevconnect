@@ -527,11 +527,304 @@ Allows you to configure the list of nozzles available for the session.
 ## Flow Description
 ## PrePaid Site System Implementation
 ###Reserve Notification (POST)
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/FPs/{{FuelPointId}}/reserveNotification* </br>
+*Method: Post* </br>
+*Body:*
+
+```json
+{
+    "timestamp": "2023-06-02T12:20:50.311Z",
+    "result": "success",
+    "error": "00000",
+    "message": "THE FUELING POINT WAS RESERVED SUCCESSFULLY",
+    "UMTI": "{{TransactionId}}",
+    "TransactionStatus": "PUMPRESERVED",
+    "FuelingPointId": "{{FuelPointId}}",
+    "MerchantId": "0192-7509",
+    "SiteId": {
+        "Type": "SAP",
+        "Id": "1234"
+        }
+}
+```
+
+</br>
+
+#### Response Format
+
+*Header:* Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string
+}
+
+```
+
+
 ###Reserve Notification (DELETE)
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/FPs/{{FuelPointId}}/reserveNotification* </br>
+*Method: Delete* </br>
+*Body:*
+
+```json
+{
+    "timestamp": "2023-06-02T12:20:50.311Z",
+    "result": "success",
+    "error": "00000",
+    "message": "THE FUELING POINT WAS RESERVED SUCCESSFULLY",
+    "UMTI": "{{TransactionId}}",
+    "TransactionStatus": "PUMPRESERVED",
+    "FuelingPointId": "{{FuelPointId}}",
+    "MerchantId": "0192-7509",
+    "SiteId": {
+        "Type": "SAP",
+        "Id": "1234"
+        }
+}
+```
+
+</br>
+
+#### Response Format
+
+*Header:* Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string
+}
+
+```
+
+
 ###TransactionInfo
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}* </br>
+*Method: GET* </br>
+*Body:* None
+
+</br>
+
+#### Response Format
+
+*Header:* Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string
+}
+
+```
+
 ###Authorization Notification
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/authorizationNotification* </br>
+*Method: POST* </br>
+*Body:*
+
+```json
+{ 
+    "timestamp": "2023-06-02T15:36:50.311Z", 
+    "result": "success", 
+    "error": "00000", 
+    "message": "the fueling point was approved successfully", 
+    "UMTI": "{{TransactionId}}", 
+    "transactionStatus": "authorized", 
+    "fuelingPointID": "{{FuelPointId}}", 
+    "merchantID": "0192-7509", 
+    "siteID": 
+        { 
+            "type": "SAP", 
+            "id": "1234" 
+        } 
+}
+```
+
+</br>
+
+#### Response Format
+
+*Header:* Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string
+}
+
+```
+
+
 ###BeginFuelingNotification
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/beginFuelingNotification* </br>
+*Method: POST* </br>
+*Body:*
+
+```json
+{
+    "timestamp": "2023-06-02T13:36:50.311Z",
+    "result": "success",
+    "error": "00000",
+    "message": "the fueling point is fueling",
+    "UMTI": "{{TransactionId}}",
+    "transactionStatus": "beginFueling",
+    "fuelingPointID": "{{FuelPointId}}",
+    "fuelingPointState": "FUELING",
+    "merchantID": "0192-7509",
+    "siteID": {
+        "type": "SAP",
+        "id": "GROC222"
+        }
+}
+```
+
+</br>
+
+#### Response Format
+
+*Header:* Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string,
+	"FuelingPointState": string
+}
+
+```
+
+
 ###FinalizeTransactionNotification
+
+
+#### Request Format
+
+*URL: /v{{Version}}/SiteSystem/trxs/{{TransactionId}}/finalizeTrxNotification* </br>
+*Method: POST* </br>
+*Body:*
+
+```json
+{
+    "TrxInfo": { 
+        "timestamp": "2023-06-02T15:36:50.311Z", 
+        "result": "success", 
+        "error": "00000", 
+        "message": "the fueling point was approved successfully", 
+        "UMTI": "{{TransactionId}}", 
+        "transactionStatus": "finalized", 
+        "fuelingPointID": "{{FuelPointId}}", 
+        "merchantID": "0192-7509", 
+        "siteID": 
+            { 
+                "type": "SAP", 
+                "id": "1234" 
+            } 
+    },
+    "paymentInfo": {
+        "cardCircuit": "MCB",
+        "paymentMethod": "credit",
+        "finalAmount": {
+            "value": "1",
+            "currency": null
+        },
+        "hostAuthNumber": "312350",
+        "cardType": "MASTERCARD"
+        },
+    "fuelingInfo": {
+        "fuelProducts": [{
+        "productNo": "3",
+        "productName": "ULG95",
+        "fuelPrice": {"value":"2.159"},
+        "fuelUnitOfMeasurement": "GLL",
+        "gradeAllowed": "true"
+      }],
+        "fuelingPointID": "{{TransactionId}}",
+        "fuelAmount": {
+            "value": "1",
+            "currency": null
+        },
+        "quantity": {
+            "value": "1",
+            "uom": "l"
+        },
+        "serviceLevel": "full",
+        "modeNo": "1"
+        },
+    "receiptInfo": [
+    "WELCOME",
+    "IBERA 2141 CABA",
+    "ORIONTECH S.A.",
+    "CUIT 30-12331129-2",
+    "DATE 09/07/16  12:29",
+    "TRAN# 9030038",
+    "FP# 02",
+    "SERVICE LEVEL: FullServ",
+    "PRODUCT: PLUS",
+    "GALLONS: 0.926",
+    "PRICE/G: $ 2.159",
+    "FUEL SALE  $ 2.00",
+    "THANK YOU",
+    "HAVE A NICE DAY"
+    ]
+}
+```
+
+</br>
+
+#### Response Format
+
+*Header:* Content-Type: text/json;  
+
+*Body:*
+
+```json
+{
+	"Timestamp" : DateTime,
+	"Result": string,
+	"Error": string,
+	"Message": string
+}
+
+```
+
+
 
 
 ## Mobile Paymnet Processor
