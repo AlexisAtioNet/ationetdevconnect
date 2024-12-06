@@ -39,7 +39,7 @@
 		- [Authorize](#Authorize)
 		- [Notifications](#Notifications)
 		- [GetTransaction](#GetTransaction)
-- [PostPaid Flow]
+- [PostPaid Flow](#postpaid-flow)
 	- [Flow Sequence](#flow-sequence)
  	- [Timeout State](#timeout-state)
 	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
