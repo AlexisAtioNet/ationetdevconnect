@@ -25,8 +25,9 @@
 	- [Description](#description)
  	- [API Details](#api-details)  
 	- [Site System Configuration Methods](#site-system-configuration-Methods)
-- [PrePaid Flow]
-	- [Flow Description]
+- [PrePaid Flow](#prePaid-flow)
+	- [Flow Sequence](#flow-sequence)
+ 	- [Timeout State](#timeout-state)
 	- [PrePaid Site System Implementation](#prepaid-site-system-implementation)
 		- [Reserve Notification (POST)](#reserve-notification-(POST))
 		- [Reserve Notification (DELETE)](#reserve-notification-(DELETE))
@@ -39,7 +40,7 @@
 		- [Notifications](#Notifications)
 		- [GetTransaction](#GetTransaction)n
 - [PostPaid Flow]
-	- [Flow Description]
+	- [Flow Sequence](#flow-sequence)
 	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
 		- [TransactionData]
 		- [CloseTransactionNotification]    
@@ -524,8 +525,18 @@ Allows you to configure the list of nozzles available for the session.
 
 
 # PrePaid Flow
-## Flow Description
+
+## Flow Sequence 
+
+![image](https://github.com/user-attachments/assets/d3abfaa4-8430-48b5-b39c-9fd0a8bcdc17)
+
+## Timeout States
+
+![image](https://github.com/user-attachments/assets/d9b80f84-bb17-43cf-98d1-243983302697)
+
+
 ## PrePaid Site System Implementation
+
 ### Reserve Notification (POST)
 
 #### Request Format
