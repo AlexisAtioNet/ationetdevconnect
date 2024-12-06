@@ -523,10 +523,10 @@ Allows you to configure the list of nozzles available for the session.
 
 
 
-#PrePaid Flow
+# PrePaid Flow
 ## Flow Description
 ## PrePaid Site System Implementation
-###Reserve Notification (POST)
+### Reserve Notification (POST)
 
 #### Request Format
 
@@ -570,7 +570,7 @@ Allows you to configure the list of nozzles available for the session.
 ```
 
 
-###Reserve Notification (DELETE)
+### Reserve Notification (DELETE)
 
 #### Request Format
 
@@ -614,7 +614,7 @@ Allows you to configure the list of nozzles available for the session.
 ```
 
 
-###TransactionInfo
+### TransactionInfo
 
 #### Request Format
 
@@ -640,7 +640,7 @@ Allows you to configure the list of nozzles available for the session.
 
 ```
 
-###Authorization Notification
+### Authorization Notification
 
 #### Request Format
 
@@ -685,7 +685,7 @@ Allows you to configure the list of nozzles available for the session.
 ```
 
 
-###BeginFuelingNotification
+### BeginFuelingNotification
 
 #### Request Format
 
@@ -731,7 +731,7 @@ Allows you to configure the list of nozzles available for the session.
 ```
 
 
-###FinalizeTransactionNotification
+### FinalizeTransactionNotification
 
 
 #### Request Format
