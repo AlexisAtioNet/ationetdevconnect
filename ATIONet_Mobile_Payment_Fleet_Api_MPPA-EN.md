@@ -938,7 +938,7 @@ Allows external payment processor to send a payment object search notification
 *HTTP Code 200*
 
 
-#General Information
+# General Information
 
 ## Error Handling
 
