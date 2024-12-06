@@ -39,6 +39,7 @@
 		- [Authorize](#Authorize)
 		- [Notifications](#Notifications)
 		- [GetTransaction](#GetTransaction)
+		- [MercadoPago Implementation]    
 - [PostPaid Flow](#postpaid-flow)
 	- [Flow Sequence](#flow-sequence)
  	- [Timeout State](#timeout-state)
