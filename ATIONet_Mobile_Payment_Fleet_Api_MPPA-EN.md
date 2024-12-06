@@ -38,7 +38,7 @@
 	- [Mobile Paymnet Processor](#mobile-paymnet-processor)
 		- [Authorize](#Authorize)
 		- [Notifications](#Notifications)
-		- [GetTransaction](#GetTransaction)n
+		- [GetTransaction](#GetTransaction)
 - [PostPaid Flow]
 	- [Flow Sequence](#flow-sequence)
 	- [PostPaid Site System Implementation](#prepaid-site-system-implementation)
