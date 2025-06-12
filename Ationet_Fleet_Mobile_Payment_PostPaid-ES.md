@@ -16,6 +16,7 @@
 ## Contenido ##
 - [Introducción](#Introducción)
 - [Autenticación](#autenticación)
+- [Diagrama de Estados](#diagrama-de-estados)
 - [Mensajería Transaccional](#mensajería-transaccional)
   - [Mensajería del Host al SiteSystem](#mensajería-del-host-al-siteSystem)
     - [Descripción General SSE](#descripción-general-sse)   
@@ -63,6 +64,11 @@ Ejemplo de Solicitud HTTP
 GET /recurso HTTP/1.1
 Host: api.ejemplo.com
 Authorization: Basic bm9tYnJlX2RlX3VzdWFyaW86Y29udHJhc2XDsWE=
+
+
+## Diagrama de Estados
+
+![Diagrama de Estados - MPPA-PostPago drawio](https://github.com/user-attachments/assets/0715d299-18a9-4cda-ac1b-68f204711bcb)
 
 
 ## Mensajería Transaccional
