@@ -13,7 +13,7 @@
 
 - Site System  [English version](Ationet_Fleet_Mobile_Payment_SiteSystem_Implementation-EN.md) / [Versión Español](Ationet_Fleet_Mobile_Payment_SiteSystem_Implementation-ES.md)
      - PrePaid  [English version](Ationet_Fleet_Mobile_Payment_PrePaid-EN.md) / [Versión Español](Ationet_Fleet_Mobile_Payment_PrePaid-EN.md)
-     - Postpaid [Versión Español](Ationet_Fleet_Mobile_Payment_PostPaid-ES.md)
+     - Postpaid [English version](Ationet_Fleet_Mobile_Payment_PostPaid-EN.md)  / [Versión Español](Ationet_Fleet_Mobile_Payment_PostPaid-ES.md) 
 - Payment Processor  
      - Fully Integrated [English version](ATIONet_Mobile_Payment_Fleet_Api_-EN.md#ationet-configuration)
      - External Integrated (Billetera Externa) [Versión Español](Ationet_Fleet_Mobile_Payment_Wallet_API.md)
