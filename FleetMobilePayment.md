@@ -1,25 +1,27 @@
 ![ationetlogo](Content/Images/ATIOnetLogo_250x70.png) 
 # Fleet Mobile Payment Documentation Center
 
-## Fleet Mobile Payment Fully Integrated
+## MPPA Socket Server (XML)
+- Site System - [English version](ATIONet_Mobile_Payment_Fleet_Api_-EN.md#site-system-implementation-guide)
+- Payment Processor  
+     - Fully Integrated [English version](ATIONet_Mobile_Payment_Fleet_Api_-EN.md#ationet-configuration)
+- Dinamyc QR Mode [English version](ATIONet_Dynamic_QR_Code_Payments-EN.md) / [Versión Español](ATIONet_Dynamic_QR_Code_Payments-ES.md)
+- Offline Mode [Versión Español](ATIONet_OFFLine_Payments-ES.md)
 
-A sturdy method that allows the execution of preauthorizations for fleet transactions, only at gas stations that own a fuel pump controller cpable of
-communicating with the MPPA protocol (conexxus).
 
-[English version](ATIONet_Mobile_Payment_Fleet_Api_-EN.md)
+## MPPA SSE (JSON)
 
-## Fleet Mobile Payment - Dynamic QR
+- Site System  [English version](Ationet_Fleet_Mobile_Payment_SiteSystem_Implementation-EN.md) / [Versión Español](Ationet_Fleet_Mobile_Payment_SiteSystem_Implementation-ES.md)
+     - PrePaid  [English version](Ationet_Fleet_Mobile_Payment_PrePaid-EN.md) / [Versión Español](Ationet_Fleet_Mobile_Payment_PrePaid-EN.md)
+     - Postpaid [English version](Ationet_Fleet_Mobile_Payment_PostPaid-EN.md)  / [Versión Español](Ationet_Fleet_Mobile_Payment_PostPaid-ES.md) 
+- Payment Processor  
+     - Fully Integrated [English version](ATIONet_Mobile_Payment_Fleet_Api_-EN.md#ationet-configuration)
+     - External Integrated (Billetera Externa) [English version](Ationet_Fleet_Mobile_Payment_Wallet_API-EN.md) / [Versión Español](Ationet_Fleet_Mobile_Payment_Wallet_API-ES.md)
 
-A method that allows third-party Points of Sale (POS) to generate dynamic QR codes (following an ATIONET standard) containing the transaction's data.
 
-[English version](ATIONet_Dynamic_QR_Code_Payments-EN.md)<br>
-[Spanish version](ATIONet_Dynamic_QR_Code_Payments-ES.md)
 
-## Fleet Mobile Payment - OFF Line 
 
-A method designed for gas stations that don't own a fuel pump controller.
 
-[Spanish version](ATIONet_OFFLine_Payments-ES.md)
 
 
 
