@@ -11,7 +11,7 @@
 - [Native Transaction Protocol API messages](AN-Native_Auth_Protocol_Messages.md)
 
 ## Fleet Mobile Payment Module
-> This API is responsible for processing and orchestrating all the flow that requires an MPPA type integration but for a fleet card.
+> This API is responsible for processing and orchestrating all the flow that requires an MPPA type integration.
 
 - [Fleet Mobile Payment APIs Specifications](FleetMobilePayment.md)
 
