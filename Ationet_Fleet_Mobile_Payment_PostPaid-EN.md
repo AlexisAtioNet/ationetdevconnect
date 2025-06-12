@@ -16,6 +16,7 @@
 ## Contenido ##
 - [Introduction](#Introduction)
 - [Authentication](#authentication)
+- [State Diagram](#state-diagram)
 - [Transactional Messaging](#transactional-messaging)
   - [Host to SiteSystem Messaging](#host-to-siteSystem-messaging)
     - [SSE Overview](#sse-overview)
@@ -63,6 +64,11 @@ Example HTTP Request
 GET /recurso HTTP/1.1
 Host: api.ejemplo.com
 Authorization: Basic bm9tYnJlX2RlX3VzdWFyaW86Y29udHJhc2XDsWE=
+
+
+## State Diagram
+
+![Diagrama de Estados - MPPA-PostPago drawio](https://github.com/user-attachments/assets/0715d299-18a9-4cda-ac1b-68f204711bcb)
 
 
 ## Transactional Messaging
