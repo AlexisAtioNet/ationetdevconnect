@@ -16,6 +16,7 @@
 ## Contenido ##
 - [Introducción](#Introducción)
 - [Autenticación](#autenticación)
+- [Diagrama de Estados](#diagrama-de-estados)
 - [Mensajería Transaccional](#mensajería-transaccional)
   - [Flujo Transaccional](#flujo-transaccional)
   - [Mensajería del Host al SiteSystem](#mensajería-del-host-al-siteSystem)
@@ -72,6 +73,11 @@ Ejemplo de Solicitud HTTP
 GET /recurso HTTP/1.1
 Host: api.ejemplo.com
 Authorization: Basic bm9tYnJlX2RlX3VzdWFyaW86Y29udHJhc2XDsWE=
+
+
+## Diagrama de Estados
+
+![Diagrama de Estados - MPPA-PrePago drawio](https://github.com/user-attachments/assets/12ba858c-e6fb-4176-bf38-ce5286a76689)
 
 
 ## Mensajería Transaccional
