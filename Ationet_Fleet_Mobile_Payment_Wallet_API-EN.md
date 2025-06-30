@@ -20,10 +20,12 @@
      - [Authorize](#authorize)
      - [Get Transaction](#transaction-data)
      - [Notification](#notification-prepaid)
+     - [Sequence](#prepaid-sequence)
   - [Post Paid](#postpaid)
      - [Payment Request](#payment-request)
      - [Get Transaction](#transaction-data)
      - [Notification](#notification-prepaid)
+     - [Sequence](#postpaid-sequence)
   - [Endpoint Wallet Payment Object](#endpoint-wallet-payment-object)
 
 
@@ -143,6 +145,11 @@ Empty
 <b>Response Body:</b>
 Empty
 
+#### PrePaid Sequence
+
+![ATIONET PRIS-PrePago - Generic drawio](https://github.com/user-attachments/assets/4690393b-497c-4214-ba1a-dcac7c4a11ca)
+
+
 
 ### Postpaid
 
@@ -229,6 +236,12 @@ Empty
 Empty
 <b>Response Body:</b>
 Empty
+
+
+#### PostPaid Sequence
+
+![ATIONET PRIS-PostPago - Generic drawio](https://github.com/user-attachments/assets/f84b2c14-4a3f-42e4-9bec-bac0451a2ee1)
+
 
 
 
