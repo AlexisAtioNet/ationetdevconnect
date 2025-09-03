@@ -26,17 +26,17 @@
 
 ### Objective
 
-The main objective of RevoPAY Technician, is to allow an easy configuration for RevoPAY. In just a few minutes after arrival, the technician can conect via BLE (Bluetooth Low Enery) to RevoPAY and make every configuration needed in order to have it up and running, ready to go. Besides, it facilitates extra configuration in MobilePayment, such as crating an existing site in Ationet inside MobilePayment, and its corresponding credentials. 
+The main objective of RevoPAY Technician, is to allow an easy configuration for RevoPAY. In just a few minutes after arrival, the technician can connect via BLE (Bluetooth Low Energy) to RevoPAY and make every configuration needed in order to have it up and running, ready to go. Besides, it facilitates extra configuration in MobilePayment, such as creating an existing site in Ationet inside MobilePayment, and its corresponding credentials. 
 
 
 ### Pre-Requisites
-* This entity is a software application embedded in a Mobile Device or downloaded by a consumer onto a Mobile Device, such as a smartphone or tablet. Supports both Android and IOs devices.
+* This entity is a software application embedded in a Mobile Device or downloaded by a consumer onto a Mobile Device, such as a smartphone or tablet. Supports both Android and iOS devices.
 
 * An existing user with the NWTechnician role in Ationet.
 
 * An existing network in MobilePayment with the exact same NetworkCode (XYZ) as in Ationet.
 
-* A RevoPAY plugged on and near in order to have a successfull Bluetooth communication.
+* A RevoPAY plugged on and near in order to have a successful Bluetooth communication.
 
 * An existing site in Ationet with an active AN-MobilePayment terminal.
 
@@ -55,7 +55,7 @@ The main objective of RevoPAY Technician, is to allow an easy configuration for 
 ## How to use RevoPAY Technician
 
 Once you have an existing user with the NWTechnician role and the Network is created in MobilePayment, you are ready to go.
-This guide will explain the different actions aveilable inside the app and how to use them.
+This guide will explain the different actions available inside the app and how to use them.
 
  - [Login](#app-login)
     - [Device Authentication Methods](#device-authentication-methods)
@@ -96,13 +96,13 @@ This guide will explain the different actions aveilable inside the app and how t
 
 ## Network Configuration For RevoPAY Technician
 
-Once you log in into RevoPAY Technician, an Entity Selector will be shown. If the user only has one associated network in Ationet, it will automatically select it, otherwise, it will ask the technician to pick which Network he will be working with. This step is needed in order to show the technician the corresponding sites for the selected Network. 
+Once you log in RevoPAY Technician, an Entity Selector will be shown. If the user only has one associated network in Ationet, it will automatically select it, otherwise, it will ask the technician to pick which Network he will be working with. This step is needed in order to show the technician the corresponding sites for the selected Network. 
 
 ### Conditions
 
-As mentioned, in order to move foward with the configuration for RevoPAY, the technician must select an entity. After it is selected, it will validate the network's existance in MobilePayment. In order for this condition to be satisfied, there must be one network with the same CODE both Ationet and MobilePayment. If it shares the Code, then it will be considered as the SAME Network by RevoPAY Technician.
+As mentioned, in order to move forward with the configuration for RevoPAY, the technician must select an entity. After it is selected, it will validate the network's existence in MobilePayment. In order for this condition to be satisfied, there must be one network with the same CODE in both Ationet and MobilePayment. If it shares the Code, then it will be considered as the SAME Network by RevoPAY Technician.
 
-### Inexistant MobilePayment Network
+### Inexistent MobilePayment Network
 
 In case the Network does not exist in MobilePayment, RevoPAY Technician will display an error message indicating that the network is inexistant in MobilePayment, and that in order to proceed, it must first be created. This is the reason creating the Network in MobilePayment is a requisite.
 
@@ -166,13 +166,13 @@ And once the user is ready, you can now log in RevoPAY Technician!
 
 ## Site with AN-MobilePayment associated terminal
 
-Once you have already logged with a NWTechician user, you will be asked to select wich site to configure. The shown list will ONLY show sites that belong to the selected entity and, most importantly, among those sites, ONLY the ones that have an ACTIVE AN-MobilePayment terminal associated.
+Once you have already logged with a NWTechnician user, you will be asked to select which site to configure. The shown list will ONLY show sites that belong to the selected entity and, most importantly, among those sites, ONLY the ones that have an ACTIVE AN-MobilePayment terminal associated.
 
 If the sites display does not show your site, then please check the following validations.
 
 * The site exists in Ationet (Check in Ationet's Sites module).
 * The site has an associated AN-MobilePayment terminal (Check in Ationet's Terminals module).
-* The AN-MobilePayement terminal is active.
+* The AN-MobilePayment terminal is active.
 
 <br/>
 
@@ -195,7 +195,7 @@ If the sites display does not show your site, then please check the following va
 
 <br/>
 
-When you first open the app, it will ask for a username and a password. This must be the ones of a NWTechnican user in Ationet, otherwise it wont log in. Neither the user field nor the password field can be empty, and the user must have a valid mail format. After pressing Log In, if the user and password are valid, the technician will be asked to select an entity!
+When you first open the app, it will ask for a username and a password. This must be the ones of a NWTechnician user in Ationet, otherwise it won't log in. Neither the user field nor the password field can be empty, and the user must have a valid mail format. After pressing Log In, if the user and password are valid, the technician will be asked to select an entity!
 
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
@@ -206,9 +206,9 @@ When you first open the app, it will ask for a username and a password. This mus
   <img src="Content/Images/RevoPAYTechnician/AuthenticationMethods.png" alt="ationetlogo" width="300"/>
 
   <div style="max-width: 700px;">
-    If the Remember Session checkbox is <strong>checked</strong> and afterwards, you login correctly, next time you enter the app, instead of completing the user/password fields, they will already be filled with the last completed information. Besides, if your device has any Authentication method active, such as PIN, Pattern, Fingerprint or Facial recognicion, it will ask you to authenticate. <br/><br/> 
-    If you have more that one Authentication mehtod active, you will be able to choose which one to use! 
-    After authenticating, you will atomatically log in!
+    If the Remember Session checkbox is <strong>checked</strong> and afterwards, you login correctly, next time you enter the app, instead of completing the user/password fields, they will already be filled with the last completed information. Besides, if your device has any Authentication method active, such as PIN, Pattern, Fingerprint or Facial recognition, it will ask you to authenticate. <br/><br/> 
+    If you have more that one Authentication method active, you will be able to choose which one to use! 
+    After authenticating, you will automatically log in!
   </div>
 </div>
 
@@ -236,8 +236,8 @@ Here the technician will be asked to select which network to work on. The list o
 
 ### Site Selector
 
-After selecting the Entity, it will show a Sites display view, where the technician will be able to select which site is he working on.
-The display will ONLY show the sites belonging to the selected Network that have an ACTIVE AN-MobilePayment type terminal associated. Othershie, either the terminal is inactive, or the terminal isn't an AN-MobilePayment one, or the terminal is not associated to the site, then, the site won't appear on the list. 
+After selecting the Entity, it will show a Sites display view, where the technician will be able to select which site he is working on.
+The display will ONLY show the sites belonging to the selected Network that have an ACTIVE AN-MobilePayment type terminal associated. Otherwise, either the terminal is inactive, or the terminal isn't an AN-MobilePayment one, or the terminal is not associated to the site, then, the site won't appear on the list. 
 
 Once you find your site (there is a filter to search for Site Name) and confirm, there are three scenarios.
 
@@ -281,7 +281,7 @@ In this case, only a simple "Site Selected. Credentials renewed" message display
 
 ## The site exists in MobilePayment and satisfies the Code conditions for RevoPAY, but belongs to another network.
 
-Due to how RevoPAY functions, it does not allow having to sites with the same code, independently from the Network. Therefore, it won't allow to create a Site with the same code as an already existing one, belonging to another network, as that would result in neither of the sites working correctly with RevoPAY. In this case, it is recommended to change the Site Code in Ationet. Remember Site Codes in mobile payment will be in lowercase, without blank spaces, and no special characters! 
+Due to how RevoPAY functions, it does not allow having two sites with the same code, independently from the Network. Therefore, it won't allow to create a Site with the same code as an already existing one, belonging to another network, as that would result in neither of the sites working correctly with RevoPAY. In this case, it is recommended to change the Site Code in Ationet. Remember Site Codes in mobile payment will be in lowercase, without blank spaces, and no special characters! 
 
 If this scenario is reached, the app will show it with the following display message : 
 
@@ -299,7 +299,7 @@ If this scenario is reached, the app will show it with the following display mes
     In the <strong>HomeView</strong> page, you will find different options.<br/>
     In the Top bar, you can see the version number of the app, a Settings button and a LogOut button.<br/><br/>
     Then, there are two main menus. <br/>
-    Change Site, which will allow the technician to pick a diferent site from the same already selected Network!<br/><br/>
+    Change Site, which will allow the technician to pick a different site from the same already selected Network!<br/><br/>
     RevoPAY, which takes the technician to a Bluetooth Scanner in order to connect with the RevoPAY and make any necessary configuration!
   </div>
 </div>
@@ -331,7 +331,7 @@ In the HomeView > Settings Menu, you are able to see the Entity you selected, as
 Apart from that, you have two options
 
  * Change Password, which will take you to a page to create a new one. 
- * Change Entity, which will take you back to the Entity Selector if your user has more than one entity to select from. Otherwise, it will show a  <br/>  message indicating you only have one aveilable entity.
+ * Change Entity, which will take you back to the Entity Selector if your user has more than one entity to select from. Otherwise, it will show a  <br/>  message indicating you only have one available entity.
 
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
@@ -347,7 +347,7 @@ Apart from that, you have two options
     Only two things are needed.<br/><br/>
     1) RevoPAY must be plugged in.<br/>
     2) The technician must be near the RevoPAY in order to establish a good Bluetooth communication.<br/>   
-    <br/>Otherwise, it will fail to connect or to send/recieve information.
+    <br/>Otherwise, it will fail to connect or to send/receive information.
   </div>
 </div>
 
@@ -358,7 +358,7 @@ Apart from that, you have two options
 
   <div style="max-width: 700px;">
     Once you go in the RevoPAY module, you will find a Bluetooth Scanner. After pressing Scan Devices, you will need to allow the app certain bluetooth related permissions for the scanner to work. <br/><br/>
-    After a few seconds, it should be able to detect the RevoPAY near you. If it doesn't show up, pleaste try going back and scanning again, and if that fails too, restart the RevoPAY (Unplug and plug it again).<br/><br/>To connect, simply select the RevoPAY!
+    After a few seconds, it should be able to detect the RevoPAY near you. If it doesn't show up, please try going back and scanning again, and if that fails too, restart the RevoPAY (Unplug and plug it again).<br/><br/>To connect, simply select the RevoPAY!
   </div>
 </div>
 
@@ -385,8 +385,8 @@ Apart from that, you have two options
 <img src="Content/Images/RevoPAYTechnician/RevoPAYConnected.png" alt="ationetlogo" width="300"/>
 
 <br/>
-In the Wifi Module for RevoPAY, there is a LED type button indicating if it has connection (red = NO CONNECTION / green = CONNECTED)
-And one list showing all aveilable wifi networks RevoPAY can access to. Select one, put the password, connect, wait a few seconds, and done! The connection should be established. <br/><br/>If after a while it doesn't connect, please try again and check the inputed password.  
+In the Wifi Module for RevoPAY, there is an LED-type button indicating if it has connection (red = NO CONNECTION / green = CONNECTED)
+And one list showing all available wifi networks RevoPAY can access to. Select one, put the password, connect, wait a few seconds, and done! The connection should be established. <br/><br/>If after a while it doesn't connect, please try again and check the inputted password.  
 
 
 ## Appsettings Configuration for RevoPAY
@@ -399,16 +399,16 @@ And one list showing all aveilable wifi networks RevoPAY can access to. Select o
 In the Appsettings view you will be able to configure everything you need. URL, SiteSystem, Credentials, etc.
 You <strong>WON'T</strong> be able to change the SiteCode or the NetworkCode, as these are taken from the past selections. <br/>If you need to change it, either go to HomeView>Settings>Change Entity for the NetworkCode, or to HomeView>Change Site for the SiteCode.
 <br/><br/>
-MPPAHost Credentials on the other way, are configurable. We recommend using the generic credentials, which are assured to be valid!<br/>
+MPPAHost Credentials on the other hand, are configurable. We recommend using the generic credentials, which are assured to be valid!<br/>
 Remember : Admin{SiteCode}, Pass{SiteCode}
 <br/><br/>
-There is a LED Type button which indicates if the MPPAClient service is running. Not if it is working correctly, only if it is running.
+There is an LED-Type button which indicates if the MPPAClient service is running. Not if it is working correctly, only if it is running.
 <br/>
 There is also an advanced option button, which enables certain other fields to be completed, such as timeouts or blob-configuration.
 <br/><br/>
-On the SisteSystem Configuration menu, you will be able to select which SiteSystem type to use, such as PTS-2 or Nano-CPI.
+On the SiteSystem Configuration menu, you will be able to select which SiteSystem type to use, such as PTS-2 or Nano-CPI.
 <br/>
 Each of these options will display the extra needed configuration accordingly.
 <br/>
 <br/>
-Finally a Send Configuraiton button, which will update the MPPAClient service's appsetting via Bluetooth as configured by the technician!
+Finally, a Send Configuration button, which will update the MPPAClient service's appsetting via Bluetooth as configured by the technician!
