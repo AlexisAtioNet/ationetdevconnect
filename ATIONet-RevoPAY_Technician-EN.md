@@ -8,13 +8,13 @@
 |--- |--- |
 |Archivo:|ATIONet - RevoPAY Technician|
 |Doc Version:|1.0|
-|Date:|02-09-2025|
+|Date:|03-09-2025|
 |Author:|Joaquín Miguens|
 
 |Change Control |||
 |--- |--- |--- |
 |Ver.|Date|Changes|
-|1.0|02-09-2025|Initial version.|
+|1.0|03-09-2025|Initial version.|
 
 
 ## Content
@@ -58,20 +58,19 @@ Once you have an existing user with the NWTechnician role and the Network is cre
 This guide will explain the different actions aveilable inside the app and how to use them.
 
  - [Login](#app-login)
-    - [Biometric Authentication](#)
-    - [Forgot password?](#)
+    - [Device Authentication Methods](#device-authentication-methods)
+    - [Forgot password?](#forgot-password)
     - [Entity Selector](#entity-selector)   
     - [Site Selector](#site-selector) 
- - [HomeView](#app-homeview)
-    - [LogOut](#app-logout)
+ - [HomeView](#homeview)
+    - [LogOut](#logout)
+    - [Settings](#settings)
     - [Change Site](#site-selector)
-    - [Settings](#app-settings)
-        - [Change Entity](#)
-        - [Change Password](#)
-    - [RevoPAY](#app-revopay)
-        - [Bluetooth Scanner](#app-blutooth-scanner)
-        - [Wifi Configuration](#app-wifi-configuration-for-revopay)
-        - [Appsettings Configuration](#app-appsettings-configuration-for-revopay)
+    - [RevoPAY](#revopay)
+        - [Bluetooth Scanner](#bluetooth-scanner)
+        - [General Menu](#revopay-general-menu)
+        - [Wifi Configuration](#wifi-configuration-for-revopay)
+        - [Appsettings Configuration](#appsettings-configuration-for-revopay)
 
 
 <br/>
@@ -198,9 +197,42 @@ If the sites display does not show your site, then please check the following va
 
 When you first open the app, it will ask for a username and a password. This must be the ones of a NWTechnican user in Ationet, otherwise it wont log in. Neither the user field nor the password field can be empty, and the user must have a valid mail format. After pressing Log In, if the user and password are valid, the technician will be asked to select an entity!
 
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+### Device Authentication Methods
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="Content/Images/RevoPAYTechnician/AuthenticationMethods.png" alt="ationetlogo" width="300"/>
+
+  <div style="max-width: 700px;">
+    If the Remember Session checkbox is <strong>checked</strong> and afterwards, you login correctly, next time you enter the app, instead of completing the user/password fields, they will already be filled with the last completed information. Besides, if your device has any Authentication method active, such as PIN, Pattern, Fingerprint or Facial recognicion, it will ask you to authenticate. <br/><br/> 
+    If you have more that one Authentication mehtod active, you will be able to choose which one to use! 
+    After authenticating, you will atomatically log in!
+  </div>
+</div>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+
+### Forgot password
+
+Will ask you to complete your user's mail. Once validated, check your mailbox for how to reset it!
+
+<img src="Content/Images/RevoPAYTechnician/ForgotPassword.png" alt="ationetlogo" width="300"/>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
 ### Entity Selector
 
 Here the technician will be asked to select which network to work on. The list only shows the networks associated to the user in Ationet. In case the user only has one network associated, it will automatically select it. Otherwise, the technician must indicate which one.
+
+<img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="300"/>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
 
 ### Site Selector
 
@@ -254,3 +286,129 @@ Due to how RevoPAY functions, it does not allow having to sites with the same co
 If this scenario is reached, the app will show it with the following display message : 
 
 <img src="Content/Images/RevoPAYTechnician/SiteOnAnotherNetwork.png" alt="ationetlogo" width="300"/>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+## HomeView
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="Content/Images/RevoPAYTechnician/HomeView.png" alt="HomeView" width="300"/>
+
+  <div style="max-width: 700px;">
+    In the <strong>HomeView</strong> page, you will find different options.<br/>
+    In the Top bar, you can see the version number of the app, a Settings button and a LogOut button.<br/><br/>
+    Then, there are two main menus. <br/>
+    Change Site, which will allow the technician to pick a diferent site from the same already selected Network!<br/><br/>
+    RevoPAY, which takes the technician to a Bluetooth Scanner in order to connect with the RevoPAY and make any necessary configuration!
+  </div>
+</div>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+### LogOut
+The LogOut button will take you back to the Login view, and forget both the user used to log in, and the authentication methods of your device! 
+
+<img src="Content/Images/RevoPAYTechnician/LogOut.png" alt="LogOut" width="150"/>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+<br/>
+
+### Settings
+
+<img src="Content/Images/RevoPAYTechnician/HomeViewSettings.png" alt="ationetlogo" width="300"/>
+<img src="Content/Images/RevoPAYTechnician/ChangePassword.png" alt="ationetlogo" width="301"/>
+<img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="302"/>
+<img src="Content/Images/RevoPAYTechnician/OnlyOneEntity.png" alt="ationetlogo" width="300"/>
+
+<br/>
+
+In the HomeView > Settings Menu, you are able to see the Entity you selected, as well as both the Ationet Site, and the MobilePayment Site with the following format : Code(Name).
+
+Apart from that, you have two options
+
+ * Change Password, which will take you to a page to create a new one. 
+ * Change Entity, which will take you back to the Entity Selector if your user has more than one entity to select from. Otherwise, it will show a  <br/>  message indicating you only have one aveilable entity.
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+## RevoPAY
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="Content/Images/RevoPAYTechnician/RevoPAY Module.png" alt="RevoPAY" width="250"/>
+
+  <div style="max-width: 700px;">
+    Up to this point, every configuration done is directly related to Ationet or MobilePayment. Networks, Sites, Credentials, etc. <br/>
+    RevoPAY's Module is intended for the technician to actually configure a new or an already installed RevoPAY.<br/><br/>
+    Only two things are needed.<br/><br/>
+    1) RevoPAY must be plugged in.<br/>
+    2) The technician must be near the RevoPAY in order to establish a good Bluetooth communication.<br/>   
+    <br/>Otherwise, it will fail to connect or to send/recieve information.
+  </div>
+</div>
+
+### Bluetooth Scanner
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="Content/Images/RevoPAYTechnician/BleScanner.png" alt="BLE Scanner" width="250"/>
+
+  <div style="max-width: 700px;">
+    Once you go in the RevoPAY module, you will find a Bluetooth Scanner. After pressing Scan Devices, you will need to allow the app certain bluetooth related permissions for the scanner to work. <br/><br/>
+    After a few seconds, it should be able to detect the RevoPAY near you. If it doesn't show up, pleaste try going back and scanning again, and if that fails too, restart the RevoPAY (Unplug and plug it again).<br/><br/>To connect, simply select the RevoPAY!
+  </div>
+</div>
+
+## RevoPAY General Menu
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="Content/Images/RevoPAYTechnician/RevoPAYGeneralMenu.png" alt="BLE Scanner" width="250"/>
+
+  <div style="max-width: 700px;">
+    After establishing connection with RevoPAY, the technician will be redirected to a General Configuration Menu for RevoPAY, where you can access to main options :<br/><br/>
+    <strong>Wifi Configuration</strong><br/><br/>
+    Where the technician will be able to check if RevoPAY has wifi connection, and if it doesn't, connect it to a Wifi Network.
+    <br/><br/>
+    <strong>Appsetting's Configuration</strong><br/><br/>
+    Where the technician will be able to modify RevoPAY's appsettings file as needed!
+  </div>
+</div>
+<br/><br/>
+
+## Wifi Configuration for RevoPAY
+
+<img src="Content/Images/RevoPAYTechnician/RevoPAYNoConnection.png" alt="ationetlogo" width="300"/>
+<img src="Content/Images/RevoPAYTechnician/RevoPAYConnect.png" alt="ationetlogo" width="300"/>
+<img src="Content/Images/RevoPAYTechnician/RevoPAYConnected.png" alt="ationetlogo" width="300"/>
+
+<br/>
+In the Wifi Module for RevoPAY, there is a LED type button indicating if it has connection (red = NO CONNECTION / green = CONNECTED)
+And one list showing all aveilable wifi networks RevoPAY can access to. Select one, put the password, connect, wait a few seconds, and done! The connection should be established. <br/><br/>If after a while it doesn't connect, please try again and check the inputed password.  
+
+
+## Appsettings Configuration for RevoPAY
+
+<img src="Content/Images/RevoPAYTechnician/Configuration1.png" alt="ationetlogo" width="292"/>
+<img src="Content/Images/RevoPAYTechnician/Configuration2.png" alt="ationetlogo" width="300"/>
+<img src="Content/Images/RevoPAYTechnician/SentConfiguration.png" alt="ationetlogo" width="301"/>
+
+<br/>
+In the Appsettings view you will be able to configure everything you need. URL, SiteSystem, Credentials, etc.
+You <strong>WON'T</strong> be able to change the SiteCode or the NetworkCode, as these are taken from the past selections. <br/>If you need to change it, either go to HomeView>Settings>Change Entity for the NetworkCode, or to HomeView>Change Site for the SiteCode.
+<br/><br/>
+MPPAHost Credentials on the other way, are configurable. We recommend using the generic credentials, which are assured to be valid!<br/>
+Remember : Admin{SiteCode}, Pass{SiteCode}
+<br/><br/>
+There is a LED Type button which indicates if the MPPAClient service is running. Not if it is working correctly, only if it is running.
+<br/>
+There is also an advanced option button, which enables certain other fields to be completed, such as timeouts or blob-configuration.
+<br/><br/>
+On the SisteSystem Configuration menu, you will be able to select which SiteSystem type to use, such as PTS-2 or Nano-CPI.
+<br/>
+Each of these options will display the extra needed configuration accordingly.
+<br/>
+<br/>
+Finally a Send Configuraiton button, which will update the MPPAClient service's appsetting via Bluetooth as configured by the technician!
