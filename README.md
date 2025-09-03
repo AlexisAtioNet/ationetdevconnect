@@ -18,8 +18,7 @@
 ## RevoPAY
 > This API is responsible for processing and orchestrating all the flow that requires an MPPA type integration regarding RevoPAY.
 
-- [RevoPAY]()
-- [RevoPAY Technician App](ATIONet-RevoPAY_Technician-EN.md)
+- RevoPAY Technician App - [English version](ATIONet-RevoPAY_Technician-EN.md) / [Versión Español](ATIONet-RevoPAY_Technician-ES.md)
 
 ## Entities
 > This API is responsible for interacting with all ATIONET entities, either to create or modify them, whether they are sites, companies, contracts, projects, etc.

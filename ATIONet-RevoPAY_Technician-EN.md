@@ -38,16 +38,16 @@ The main objective of RevoPAY Technician, is to allow an easy configuration for 
 
 * A RevoPAY plugged on and near in order to have a successful Bluetooth communication.
 
-* An existing site in Ationet with an active AN-MobilePayment terminal.
+* An existing site in Ationet with an active AN-MobilePayment terminal associated.
 
 ## Ationet Configuration 
-- [NWTechnicianRole](#ationet-configuration-for-revopay-technician)
+- [NWTechnician Role](#ationet-configuration-for-revopay-technician)
 - [Site with AN-MobilePayment associated terminal](#site-with-an-mobilepayment-associated-terminal)
 
 
 ## MobilePayment Configuration
 
-- [Network](#network-configuration-for-revopay-technician) 
+- [Network Configuration](#network-configuration-for-revopay-technician) 
 - [How to create a Network in MobilePayment](#how-to-create-a-network-in-mobilepayment) 
 
 <br/>
@@ -247,9 +247,9 @@ Keep in mind that it filters among the MobilePayment sites via SiteCode. Also, t
 ## The site doesn't exit in MobilePayment
 
 In this case, the app will show you a Site Creation view, where the technician will be able to see the site information and confirm its creation.
-It will also create new credentials, with the following format : 
-    - User : Admin{SiteCode}
-    - Pass : Admin{SiteCode}
+It will also create new credentials, with the following format : <br/>
+- User : Admin{SiteCode}<br/>
+- Pass : Admin{SiteCode}<br/><br/>
     Where the Site Code will be in lowercase and without blank spaces, as it is one condition for RevoPAY to work correctly! 
 
 <img src="Content/Images/RevoPAYTechnician/SiteNeedsCreation.png" alt="ationetlogo" width="300"/>
@@ -260,23 +260,16 @@ It will also create new credentials, with the following format :
 
 ## The site exists in MobilePayment in the selected Network, and satisfies the Code conditions for RevoPAY
 
-In this case, the app will show you a Site Creation view, where the technician will be able to see the site information and confirm its creation.
-It will also create new credentials, with the following format : 
-
-    - User : Admin{SiteCode}
-    - Pass : Pass{SiteCode}                   
-
-     ej: Code = 123 => User = Admin123
-                       Pass = Pass123 
-Where the Site Code will be in lowercase and without blank spaces, as it is one condition for RevoPAY to work correctly! 
-
 In this case, only a simple "Site Selected. Credentials renewed" message display will be shown.
+It will renew credentials just like in creation :<br/>
+    - User : Admin{SiteCode}<br/>
+    - Pass : Pass{SiteCode}     
 
 <img src="Content/Images/RevoPAYTechnician/SiteSelected.png" alt="ationetlogo" width="300"/>
 
 <br/>
 
-## The site exists in MobilePayment and satisfies the Code conditions for RevoPAY, but belongs to another network.
+## The site doesn't exist in MobilePayment and satisfies the Code conditions for RevoPAY, but exists for another network.
 
 Due to how RevoPAY functions, it does not allow having two sites with the same code, independently from the Network. Therefore, it won't allow to create a Site with the same code as an already existing one, belonging to another network, as that would result in neither of the sites working correctly with RevoPAY. In this case, it is recommended to change the Site Code in Ationet. Remember Site Codes in mobile payment will be in lowercase, without blank spaces, and no special characters! 
 
@@ -410,7 +403,7 @@ You <strong>WON'T</strong> be able to change the SiteCode or the NetworkCode, as
 MPPAHost Credentials on the other hand, are configurable. We recommend using the generic credentials, which are assured to be valid!<br/>
 Remember : Admin{SiteCode}, Pass{SiteCode}
 <br/><br/>
-There is an LED-Type button which indicates if the MPPAClient service is running. Not if it is working correctly, only if it is running.
+There is an LED-Type button which indicates if the MPPAClient service is running. Not if RevoPAY is working correctly, only if the service is running.
 <br/>
 There is also an advanced option button, which enables certain other fields to be completed, such as timeouts or blob-configuration.
 <br/><br/>
@@ -423,16 +416,4 @@ Finally, a Send Configuration button, which will update the MPPAClient service's
 
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
-
-## Support and Contact
-
-For further assistance with **RevoPAY Technician**, please contact our support team:
-
-- **Email:** support@ationet.com   
-- **Website:** [www.ationet.com](https://www.ationet.com)  
-
-Our support team is available **24/7** to help you resolve any issues and ensure a smooth deployment of your RevoPAY solutions.  
-Please have your **NetworkCode** and **SiteCode** ready when contacting us, to speed up the troubleshooting process.
-
----
 *End of Document*
