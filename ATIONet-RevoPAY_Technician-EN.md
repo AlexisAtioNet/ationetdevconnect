@@ -129,9 +129,10 @@ Steps :
 
  * Validate the Network was created Succesfully and it is enabled (if it is disabled, remember to enable it)!
 
+<div style="display: flex; gap: 10px;">
     <br/><img src="Content/Images/RevoPAYTechnician/enabledNetwork.png" alt="ationetlogo" width="1200"/>
     <br/><img src="Content/Images/RevoPAYTechnician/createdNetworkSuccessfully.png" alt="ationetlogo" width="300"/>
-
+</div>
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
 
@@ -139,8 +140,10 @@ Steps :
 ## Ationet Configuration For RevoPAY Technician
 ### NWTechnician Role Configuration
 
+<div style="display: flex; gap: 10px;">
 <img src="Content/Images/RevoPAYTechnician/NWTechnicianRole.png" alt="ationetlogo" width="1000"/>
 <img src="Content/Images/RevoPAYTechnician/NWTechnicianRole_NavigationMenuAtionet.png" alt="ationetlogo" width="575"/>
+</div>
 
 <br/>
 In order to log in RevoPAY Technician successfully, it needs a user with the specific role of NWTechnician. 
@@ -183,9 +186,11 @@ If the sites display does not show your site, then please check the following va
 
 ## App Login
 
-<img src="Content/Images/RevoPAYTechnician/Technician_login.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="325"/>
-<img src="Content/Images/RevoPAYTechnician/site_selector_helper.png" alt="ationetlogo" width="325"/>
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/Technician_login.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="325"/>
+    <img src="Content/Images/RevoPAYTechnician/site_selector_helper.png" alt="ationetlogo" width="325"/>
+</div>
 
 <br/>
 
@@ -223,8 +228,10 @@ Will ask you to complete your user's mail. Once validated, check your mailbox fo
 
 Here the technician will be asked to select which network to work on. The list only shows the networks associated to the user in Ationet, not in MobilePayment. In case the user only has one network associated, it will automatically select it. Otherwise, the technician must indicate which one.
 
-<img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/selectEntityMany.png" alt="ationetlogo" width="280"/>
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/selectEntityMany.png" alt="ationetlogo" width="280"/>
+</div>
 
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
@@ -251,10 +258,11 @@ It will also create new credentials, with the following format : <br/>
 - User : Admin{SiteCode}<br/>
 - Pass : Admin{SiteCode}<br/><br/>
     Where the Site Code will be in lowercase and without blank spaces, as it is one condition for RevoPAY to work correctly! 
-
-<img src="Content/Images/RevoPAYTechnician/SiteNeedsCreation.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/SiteCreationView.png" alt="ationetlogo" width="306"/>
-<img src="Content/Images/RevoPAYTechnician/SiteCreated.png" alt="ationetlogo" width="300"/>
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/SiteNeedsCreation.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/SiteCreationView.png" alt="ationetlogo" width="306"/>
+    <img src="Content/Images/RevoPAYTechnician/SiteCreated.png" alt="ationetlogo" width="300"/>
+</div>
 
 <br/>
 
@@ -309,11 +317,12 @@ The LogOut button will take you back to the Login view, and forget both the user
 
 ### Settings
 
-<img src="Content/Images/RevoPAYTechnician/HomeViewSettings.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/ChangePassword.png" alt="ationetlogo" width="301"/>
-<img src="Content/Images/RevoPAYTechnician/selectEntityMany.png" alt="ationetlogo" width="281"/>
-<img src="Content/Images/RevoPAYTechnician/OnlyOneEntity.png" alt="ationetlogo" width="299"/>
-
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/HomeViewSettings.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/ChangePassword.png" alt="ationetlogo" width="301"/>
+    <img src="Content/Images/RevoPAYTechnician/selectEntityMany.png" alt="ationetlogo" width="281"/>
+    <img src="Content/Images/RevoPAYTechnician/OnlyOneEntity.png" alt="ationetlogo" width="299"/>
+</div>
 <br/>
 
 In the HomeView > Settings Menu, you are able to see the Entity you selected, as well as both the Ationet Site, and the MobilePayment Site with the following format : Code(Name).
@@ -328,7 +337,7 @@ Apart from that, you have two options
 
 ## RevoPAY
 
-<div style="display: flex; align-items: flex-start; gap: 20px;">
+<div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
   <img src="Content/Images/RevoPAYTechnician/RevoPAY Module.png" alt="RevoPAY" width="250"/>
 
   <div style="max-width: 700px;">
@@ -346,7 +355,7 @@ Apart from that, you have two options
 
 ### Bluetooth Scanner
 
-<div style="display: flex; align-items: flex-start; gap: 20px;">
+<div style="display: flex; align-items: flex-start; gap: 20px; ">
   <img src="Content/Images/RevoPAYTechnician/BleScanner.png" alt="BLE Scanner" width="250"/>
 
   <div style="max-width: 700px;">
@@ -379,9 +388,11 @@ Apart from that, you have two options
 
 ## Wifi Configuration for RevoPAY
 
-<img src="Content/Images/RevoPAYTechnician/RevoPAYNoConnection.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/RevoPAYConnect.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/RevoPAYConnected.png" alt="ationetlogo" width="300"/>
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/RevoPAYNoConnection.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/RevoPAYConnect.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/RevoPAYConnected.png" alt="ationetlogo" width="300"/>
+</div>
 
 <br/>
 In the Wifi Module for RevoPAY, there is an LED-type button indicating if it has connection (red = NO CONNECTION / green = CONNECTED)
@@ -391,10 +402,11 @@ And one list showing all available wifi networks RevoPAY can access to. Select o
 <hr style="border-width: 3px; border-color: lightblue;">
 
 ## Appsettings Configuration for RevoPAY
-
-<img src="Content/Images/RevoPAYTechnician/Configuration1.png" alt="ationetlogo" width="292"/>
-<img src="Content/Images/RevoPAYTechnician/Configuration2.png" alt="ationetlogo" width="300"/>
-<img src="Content/Images/RevoPAYTechnician/SentConfiguration.png" alt="ationetlogo" width="301"/>
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/Configuration1.png" alt="ationetlogo" width="292"/>
+    <img src="Content/Images/RevoPAYTechnician/Configuration2.png" alt="ationetlogo" width="300"/>
+    <img src="Content/Images/RevoPAYTechnician/SentConfiguration.png" alt="ationetlogo" width="301"/>
+</div>
 
 <br/>
 In the Appsettings view you will be able to configure everything you need. URL, SiteSystem, Credentials, etc.
