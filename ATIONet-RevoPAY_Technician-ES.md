@@ -149,9 +149,11 @@ Si la pantalla de sitios no muestra el tuyo, verifica los siguiente:
 
 ## Login
 
-<img src="Content/Images/RevoPAYTechnician/Technician_login.png" alt="ationetlogo" width="300">
-<img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="325">
-<img src="Content/Images/RevoPAYTechnician/site_selector_helper.png" alt="ationetlogo" width="325">
+<div style="display: flex; gap: 10px;">
+    <img src="Content/Images/RevoPAYTechnician/Technician_login.png" alt="ationetlogo" width="300">
+    <img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="325">
+    <img src="Content/Images/RevoPAYTechnician/site_selector_helper.png" alt="ationetlogo" width="325">
+</div>
 
 <br/>
 
