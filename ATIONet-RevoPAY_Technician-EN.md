@@ -76,6 +76,9 @@ This guide will explain the different actions available inside the app and how t
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
 
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
     
 
 
@@ -133,27 +136,18 @@ Steps :
 <hr style="border-width: 3px; border-color: lightblue;">
 
 
-
-
-
-
-
-
-
-
 ## Ationet Configuration For RevoPAY Technician
 ### NWTechnician Role Configuration
 
+<img src="Content/Images/RevoPAYTechnician/NWTechnicianRole.png" alt="ationetlogo" width="1000"/>
+<img src="Content/Images/RevoPAYTechnician/NWTechnicianRole_NavigationMenuAtionet.png" alt="ationetlogo" width="575"/>
+
+<br/>
 In order to log in RevoPAY Technician successfully, it needs a user with the specific role of NWTechnician. 
 If the introduced user doesn't have that role, it won't be able to log in. 
 
-![ationetTR](Content/Images/RevoPAYTechnician/NWTechnicianRole.png)
-
-
-
 NWTechnician supports several networks, therefore, the same technician may be able to configure several sites, from several entities. The role only has access to the Sites, Terminals and Notifications menu, as they are the only modules the app will need.
 
-![ationetTR](Content/Images/RevoPAYTechnician/NWTechnicianRole_NavigationMenuAtionet.png)
 
 And once the user is ready, you can now log in RevoPAY Technician!
 
@@ -227,9 +221,10 @@ Will ask you to complete your user's mail. Once validated, check your mailbox fo
 
 ### Entity Selector
 
-Here the technician will be asked to select which network to work on. The list only shows the networks associated to the user in Ationet. In case the user only has one network associated, it will automatically select it. Otherwise, the technician must indicate which one.
+Here the technician will be asked to select which network to work on. The list only shows the networks associated to the user in Ationet, not in MobilePayment. In case the user only has one network associated, it will automatically select it. Otherwise, the technician must indicate which one.
 
 <img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="300"/>
+<img src="Content/Images/RevoPAYTechnician/selectEntityMany.png" alt="ationetlogo" width="280"/>
 
 <br/>
 <hr style="border-width: 3px; border-color: lightblue;">
@@ -244,6 +239,8 @@ Once you find your site (there is a filter to search for Site Name) and confirm,
  - The site doesn't exit in MobilePayment.
  - The site exists in MobilePayment in the selected Network, and satisfies the Code conditions for RevoPAY.
  - The site exists in MobilePayment and satisfies the Code conditions for RevoPAY, but belongs to another network.
+
+Keep in mind that it filters among the MobilePayment sites via SiteCode. Also, the Network's existance validation will only occurr after selecting an Ationet Site.
 
 <br/>
  
@@ -321,8 +318,8 @@ The LogOut button will take you back to the Login view, and forget both the user
 
 <img src="Content/Images/RevoPAYTechnician/HomeViewSettings.png" alt="ationetlogo" width="300"/>
 <img src="Content/Images/RevoPAYTechnician/ChangePassword.png" alt="ationetlogo" width="301"/>
-<img src="Content/Images/RevoPAYTechnician/selectEntity.png" alt="ationetlogo" width="302"/>
-<img src="Content/Images/RevoPAYTechnician/OnlyOneEntity.png" alt="ationetlogo" width="300"/>
+<img src="Content/Images/RevoPAYTechnician/selectEntityMany.png" alt="ationetlogo" width="281"/>
+<img src="Content/Images/RevoPAYTechnician/OnlyOneEntity.png" alt="ationetlogo" width="299"/>
 
 <br/>
 
@@ -351,6 +348,9 @@ Apart from that, you have two options
   </div>
 </div>
 
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
 ### Bluetooth Scanner
 
 <div style="display: flex; align-items: flex-start; gap: 20px;">
@@ -361,6 +361,9 @@ Apart from that, you have two options
     After a few seconds, it should be able to detect the RevoPAY near you. If it doesn't show up, please try going back and scanning again, and if that fails too, restart the RevoPAY (Unplug and plug it again).<br/><br/>To connect, simply select the RevoPAY!
   </div>
 </div>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
 
 ## RevoPAY General Menu
 
@@ -376,7 +379,10 @@ Apart from that, you have two options
     Where the technician will be able to modify RevoPAY's appsettings file as needed!
   </div>
 </div>
-<br/><br/>
+<br/>
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
 
 ## Wifi Configuration for RevoPAY
 
@@ -388,6 +394,8 @@ Apart from that, you have two options
 In the Wifi Module for RevoPAY, there is an LED-type button indicating if it has connection (red = NO CONNECTION / green = CONNECTED)
 And one list showing all available wifi networks RevoPAY can access to. Select one, put the password, connect, wait a few seconds, and done! The connection should be established. <br/><br/>If after a while it doesn't connect, please try again and check the inputted password.  
 
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
 
 ## Appsettings Configuration for RevoPAY
 
@@ -412,3 +420,19 @@ Each of these options will display the extra needed configuration accordingly.
 <br/>
 <br/>
 Finally, a Send Configuration button, which will update the MPPAClient service's appsetting via Bluetooth as configured by the technician!
+
+<br/>
+<hr style="border-width: 3px; border-color: lightblue;">
+
+## Support and Contact
+
+For further assistance with **RevoPAY Technician**, please contact our support team:
+
+- **Email:** support@ationet.com   
+- **Website:** [www.ationet.com](https://www.ationet.com)  
+
+Our support team is available **24/7** to help you resolve any issues and ensure a smooth deployment of your RevoPAY solutions.  
+Please have your **NetworkCode** and **SiteCode** ready when contacting us, to speed up the troubleshooting process.
+
+---
+*End of Document*
