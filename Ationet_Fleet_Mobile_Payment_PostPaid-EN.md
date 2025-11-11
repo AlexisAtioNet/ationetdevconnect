@@ -330,3 +330,18 @@ The response body is as follows, where the error property must contain the value
   ]
 }
 ```
+
+
+
+## Postman Collection
+
+[Collection Download Link](https://github.com/Ationet/ationetdocs/blob/master/Content/Includes/ANFleetMobilePayment/PostPaid%20-%20Example.postman_collection.json)
+</br>
+[Environment Download Link](https://github.com/Ationet/ationetdocs/blob/master/Content/Includes/ANFleetMobilePayment/Beta%20-%20MPPAExample.postman_environment.json)
+</br>
+
+Note: To use the collection, you must request Ationet to send and configure the following: </br>
+Environment URL </br>
+User </br>
+Password </br>
+Site </br>
