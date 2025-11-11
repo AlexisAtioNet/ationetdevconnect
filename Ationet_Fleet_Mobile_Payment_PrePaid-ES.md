@@ -38,7 +38,7 @@
 
 
 ## Introducción
-Este documento describe la operación para efectuar una transacción con una autorización por medio del autorizador de flota de Ationet a travez de nuestra aplicación móvil.
+Este documento describe la operación para efectuar una transacción con la metodología Prepaid.
 
 ## Autenticación
 
