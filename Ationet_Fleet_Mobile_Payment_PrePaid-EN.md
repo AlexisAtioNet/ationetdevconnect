@@ -38,7 +38,7 @@
 
 
 ## Introduction
-This document describes how to complete a transaction with authorization through the Ationet Fleet Authorizer via our mobile app.
+This document describes how to complete a operation with PrePaid methodology.
 
 ## Authentication
 
